@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>线程池---骚操作</title>
+    <url>/2019/12/11/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E9%AA%9A%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><h2 id="效果对比"><a href="#效果对比" class="headerlink" title="效果对比"></a>效果对比</h2><ul>
+<li>普通线程的启动方式</li>
+<li>利用线程池启动线程的方式</li>
+</ul>
+<h2 id="线程池简介"><a href="#线程池简介" class="headerlink" title="线程池简介"></a>线程池简介</h2><ul>
+<li>降低资源消耗：不用频繁创建销毁资源。</li>
+<li>提高响应速度</li>
+<li>提高线程可管理性</li>
+</ul>
+<h2 id="简单线程池的设计"><a href="#简单线程池的设计" class="headerlink" title="简单线程池的设计"></a>简单线程池的设计</h2><h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><h3 id="设计过程中需要思考的问题"><a href="#设计过程中需要思考的问题" class="headerlink" title="设计过程中需要思考的问题"></a>设计过程中需要思考的问题</h3><ol>
+<li>初始创建线程数</li>
+<li>没有可用线程的解决策略</li>
+<li>缓冲数组长度</li>
+<li>缓冲数组满了怎么办？</li>
+</ol>
+<h2 id="线程池的核心参数"><a href="#线程池的核心参数" class="headerlink" title="线程池的核心参数"></a>线程池的核心参数</h2><ul>
+<li>corePoolSize</li>
+<li>maxiumPoolSize</li>
+<li>keepAliveTime</li>
+<li>unit</li>
+<li>workQueue</li>
+<li>threadFactory</li>
+<li>handle</li>
+</ul>
+<h2 id="线程池的处理流程"><a href="#线程池的处理流程" class="headerlink" title="线程池的处理流程"></a>线程池的处理流程</h2><h2 id="阻塞队列"><a href="#阻塞队列" class="headerlink" title="阻塞队列"></a>阻塞队列</h2><ul>
+<li>无界队列（链表）</li>
+<li>有界的队列（链表、数组）</li>
+<li>同步移交队列</li>
+</ul>
+<h2 id="线程池可选择的饱和策略"><a href="#线程池可选择的饱和策略" class="headerlink" title="线程池可选择的饱和策略"></a>线程池可选择的饱和策略</h2><ul>
+<li>AbortPolicy终止策略(默认):抛异常，拒绝新任务</li>
+<li>DiscardPolicy抛弃策略：抛弃新任务</li>
+<li>DiscardOldestPolicy抛弃旧任务的策略：扔掉最旧的任务，添加新的任务</li>
+<li>CallerRunsPolicy调用者运行的策略：提交任务的一方执行操作</li>
+</ul>
+<h2 id="线程池执行的示意图"><a href="#线程池执行的示意图" class="headerlink" title="线程池执行的示意图"></a>线程池执行的示意图</h2><h2 id="常用线程池"><a href="#常用线程池" class="headerlink" title="常用线程池"></a>常用线程池</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Executors.newSingleThreadExecutor() //单一线程线程池</span><br><span class="line">Executors.newCachedThreadPool() //线程数量无限线程池</span><br><span class="line">Executors.newFixedThreadPool( 10 ) //线程数量固定的线程池</span><br></pre></td></tr></table></figure>
+<h2 id="向线程池提交任务的两种方式"><a href="#向线程池提交任务的两种方式" class="headerlink" title="向线程池提交任务的两种方式"></a>向线程池提交任务的两种方式</h2><ul>
+<li>submit()</li>
+<li>execute() 无法将值返回给主线程</li>
+</ul>
+<h2 id="线程池的状态"><a href="#线程池的状态" class="headerlink" title="线程池的状态"></a>线程池的状态</h2><ul>
+<li>RUNNING</li>
+<li>SHUTDOWN</li>
+<li>STOP</li>
+<li>TIDYING</li>
+<li>TERMINATED</li>
+</ul>
+]]></content>
+      <categories>
+        <category>多线程</category>
+      </categories>
+      <tags>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/12/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
