@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hexo</title>
+    <link>http://mhp8338.github.io/</link>
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Mon, 25 Mar 2019 05:53:52 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://mhp8338.github.io/2019/12/11/hello-world/</link>
+      <guid>http://mhp8338.github.io/2019/12/11/hello-world/</guid>
+      <pubDate>Wed, 11 Dec 2019 12:31:52 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a>Hello Hexo</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content:encoded>
+      
+      <comments>http://mhp8338.github.io/2019/12/11/hello-world/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>http://mhp8338.github.io/2019/05/27/vim/</link>
+      <guid>http://mhp8338.github.io/2019/05/27/vim/</guid>
+      <pubDate>Mon, 27 May 2019 01:50:37 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;（一）初始-vim&quot;&gt;&lt;a href=&quot;#（一）初始-vim&quot; class=&quot;headerlink&quot; title=&quot;（一）初始 vim&quot;&gt;&lt;/a&gt;（一）初始 vim&lt;/h1&gt;&lt;h2 id=&quot;1-1-vim-编辑插入模式&quot;&gt;&lt;a href=&quot;#1-1-vim-编辑插
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="（一）初始-vim"><a href="#（一）初始-vim" class="headerlink" title="（一）初始 vim"></a>（一）初始 vim</h1><h2 id="1-1-vim-编辑插入模式"><a href="#1-1-vim-编辑插入模式" class="headerlink" title="1.1 vim 编辑插入模式"></a>1.1 vim 编辑插入模式</h2><p>insert-&gt;normal:<code>esc</code><br>normal-&gt;insert:</p><ul><li><code>i:insert</code>光标前插入</li><li><code>a:append</code>光标后插入</li><li><code>o:open a line below</code>当前行的下一行插入</li><li><code>A:append after line</code>当前行最后插入</li><li><code>I:insert before line</code>当前行最前方插入</li><li><code>O:append a line above</code>当前行的上一行插入</li></ul><p>保存和退出:<code>wq</code></p><h2 id="1-2-vim-的多种模式"><a href="#1-2-vim-的多种模式" class="headerlink" title="1.2 vim 的多种模式"></a>1.2 vim 的多种模式</h2><ul><li>normal:<ul><li>各种命令操作和移动</li><li>大部分情况下在浏览而不是编辑</li></ul></li><li>insert：</li><li>command:<ul><li>保存和关闭<code>:wq</code></li><li>分屏：<code>:vs</code>(竖分屏 vertical screen) <code>:sp</code>(横分屏 split)</li><li>全局替换：<code>:s/foo/bar/g</code>-&gt;<code>:s/python/java/g</code></li></ul></li><li>visual:<ul><li>Normal 模式下<code>v</code>进入 visual</li><li>使用<code>V</code>选择行</li><li><code>ctrl+v</code>块状选择文本</li></ul></li></ul><h2 id="1-3-vim-插入模式技巧"><a href="#1-3-vim-插入模式技巧" class="headerlink" title="1.3 vim 插入模式技巧"></a>1.3 vim 插入模式技巧</h2><p><code>ctrl+h</code>:删除上一个字符<br><code>ctrl+w</code>:删除上一个单词<br><code>ctrl+u</code>:删除当前行<br><code>ctrl+[</code>:切换 esc<br><code>gi</code>:快速跳转到最后一次编辑的地方进入插入模式</p><h2 id="1-4-vim-快速移动"><a href="#1-4-vim-快速移动" class="headerlink" title="1.4 vim 快速移动"></a>1.4 vim 快速移动</h2><p><code>w/W</code>移动到下一个 word/WORD 开头<br><code>e/E</code>移动到下一个 word/WORD 结尾<br><code>b/B</code>移动到上一个 word/WORD 开头<br>WORD 以空白符分割的单词，word 以非空白符分割的单词<br>行间搜索移动：</p><ul><li><code>f/F</code>跳转到目标字符(前面搜索/后边搜索)</li><li><code>;/,</code>搜寻到下一个/上一个<br>水平移动:</li><li><code>0</code><strong>移动到行首</strong>，<code>^</code>移动到第一非空白字符=<strong><code>0+w</code></strong></li><li><code>$</code><strong>移动到行尾</strong>，<code>g_</code>移动到行尾非空白字符</li></ul><p>垂直移动：</p><ul><li><code>(</code>和<code>)</code>句子之间移动</li><li><code>{</code>和<code>}</code>段落之间移动</li></ul><p>页面移动：</p><ul><li><code>gg/G</code>移动到文件的开头和结尾，<code>ctrl+o</code>快速返回</li><li><code>H/M/L</code>跳转到屏幕的开头(Head)、中间(Middle)和结尾(Lower)</li><li><code>ctrl+u/f</code>上下翻页(upword,forword)</li><li><code>zz</code>把屏幕置于中间</li></ul><h2 id="1-5-vim的增删改查"><a href="#1-5-vim的增删改查" class="headerlink" title="1.5 vim的增删改查"></a>1.5 vim的增删改查</h2><h3 id="1-5-1-vim增加字符"><a href="#1-5-1-vim增加字符" class="headerlink" title="1.5.1 vim增加字符"></a>1.5.1 vim增加字符</h3><ul><li>增加字符就是插入模式</li><li>iao</li><li>IAO<h3 id="1-5-2-vim删减"><a href="#1-5-2-vim删减" class="headerlink" title="1.5.2 vim删减"></a>1.5.2 vim删减</h3></li><li>x也可以删除</li><li>daw删除单词</li><li>diw不删除空格</li><li>dd删除行</li><li>dt)删除右括号里的内容 </li><li>d配合visual模式的使用<h3 id="1-5-3-vim快速修改"><a href="#1-5-3-vim快速修改" class="headerlink" title="1.5.3 vim快速修改"></a>1.5.3 vim快速修改</h3>常用有三个：</li><li>c(change):配合文本删除字符进入插入模式<code>c+(a)+w</code> <code>C</code> <code>ctg</code></li><li>r(replace):快速修改</li><li>s(substitude):删除当前字符进入插入模式<h3 id="1-5-4-vim快速查询"><a href="#1-5-4-vim快速查询" class="headerlink" title="1.5.4 vim快速查询"></a>1.5.4 vim快速查询</h3>查询单词也是一种常用操作：</li><li>使用<code>\</code>或者<code>?</code>进行前向或者反向操作</li><li>使用<code>n</code>或者<code>N</code>跳转下一个或者上一个匹配</li><li>使用<code>*</code>或者<code>#</code>进行当前单词的前向和后向匹配 <h2 id="vimrc"><a href="#vimrc" class="headerlink" title="vimrc"></a>vimrc</h2></li></ul><p>vimrc 的几点说明：</p><ul><li>vimrc=vim run command</li><li>系统级 vimrc 和用户级 vimrc<ul><li>系统级：所用用户都生效</li><li>用户级：不同用户命令生效状态不同</li><li>每一行作为一个命令而执行</li></ul></li></ul><h2 id="vim删除"><a href="#vim删除" class="headerlink" title="vim删除"></a>vim删除</h2><ul><li><code>d$</code>删除光标后的改行部分</li></ul>]]></content:encoded>
+      
+      <comments>http://mhp8338.github.io/2019/05/27/vim/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java MySQL</title>
+      <link>http://mhp8338.github.io/2019/05/26/Java-MySQL/</link>
+      <guid>http://mhp8338.github.io/2019/05/26/Java-MySQL/</guid>
+      <pubDate>Sun, 26 May 2019 07:49:56 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;MySQL-数据库的简介&quot;&gt;&lt;a href=&quot;#MySQL-数据库的简介&quot; class=&quot;headerlink&quot; title=&quot;MySQL 数据库的简介&quot;&gt;&lt;/a&gt;MySQL 数据库的简介&lt;/h1&gt;&lt;h2 id=&quot;1-1-MySQL-数据库的简介和安装&quot;&gt;&lt;a h
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="MySQL-数据库的简介"><a href="#MySQL-数据库的简介" class="headerlink" title="MySQL 数据库的简介"></a>MySQL 数据库的简介</h1><h2 id="1-1-MySQL-数据库的简介和安装"><a href="#1-1-MySQL-数据库的简介和安装" class="headerlink" title="1.1 MySQL 数据库的简介和安装"></a>1.1 MySQL 数据库的简介和安装</h2><h3 id="1-1-1-什么是数据库？"><a href="#1-1-1-什么是数据库？" class="headerlink" title="1.1.1 什么是数据库？"></a>1.1.1 什么是数据库？</h3><p>数据库是按数据结构来组织、存储和管理数据的仓库</p><h3 id="1-1-1-常见数据库"><a href="#1-1-1-常见数据库" class="headerlink" title="1.1.1 常见数据库"></a>1.1.1 常见数据库</h3><p>(甲骨文)Oracle、(IBM)DB2、(微软)SQL Server、Postgre SQL、MySQL。<br>MySQL 是典型的关系型数据管理系统</p><h3 id="1-1-2-相关术语"><a href="#1-1-2-相关术语" class="headerlink" title="1.1.2 相关术语"></a>1.1.2 相关术语</h3><p>数据库系统<code>Database System</code>简称 DBS，包含以下部分：</p><ul><li>数据库<code>Database</code></li><li>数据库管理系统<code>Database Manage System</code>DBMS</li><li>应用开发工具</li><li>管理员及用户</li></ul><h3 id="1-1-3-SQL-语言"><a href="#1-1-3-SQL-语言" class="headerlink" title="1.1.3 SQL 语言"></a>1.1.3 SQL 语言</h3><p>SQL(结构化查询语言 Structured Query Language)</p><ul><li>DDL:数据定义语言</li><li>DML:数据操控语言<ul><li>增</li><li>删</li><li>改</li></ul></li><li>DQL:数据查询语言<ul><li>查询用户</li></ul></li><li>DCL:数据控制语言<ul><li>控制用户权限</li></ul></li></ul><h2 id="1-2-MySQL-相关操作"><a href="#1-2-MySQL-相关操作" class="headerlink" title="1.2 MySQL 相关操作"></a>1.2 MySQL 相关操作</h2><h3 id="1-2-1-配置文件"><a href="#1-2-1-配置文件" class="headerlink" title="1.2.1 配置文件"></a>1.2.1 配置文件</h3><ul><li>隐藏文件</li><li>my.conf</li></ul><h3 id="1-2-2-登陆-退出-MySQL"><a href="#1-2-2-登陆-退出-MySQL" class="headerlink" title="1.2.2 登陆/退出 MySQL"></a>1.2.2 登陆/退出 MySQL</h3><p>登陆：</p><ul><li><code>mysql -uroot -p</code></li><li><code>mysql -uroot -p0623</code></li></ul><p>退出:</p><ul><li><code>exit</code></li><li><code>quit</code></li></ul><p>版本：</p><ul><li><code>mysql -V</code></li><li><code>mysql --version</code></li></ul><p>登陆信息中需要掌握：</p><ul><li>登陆过后命令行的结束符使用<code>;</code>或者是<code>\g</code></li><li>可以通过<code>help</code>、<code>\h</code>或<code>?</code>配合关键字查看帮助手册 </li><li><code>\c</code>可以取消当前命令的执行：<code>select user() \c</code></li></ul><h2 id="1-2-3-常用的SQL语句"><a href="#1-2-3-常用的SQL语句" class="headerlink" title="1.2.3 常用的SQL语句"></a>1.2.3 常用的SQL语句</h2><p><code>SELECT USER()</code>:得到登陆的用户<br><code>SELECT VERSION()</code>:得到mysql的版本信息<br><code>SELECT NOW()</code>:得到当前的日期时间<br><code>SELECT DATABASE()</code>:得到当前打开的数据</p><h2 id="1-2-4-SQL语句的语法规范"><a href="#1-2-4-SQL语句的语法规范" class="headerlink" title="1.2.4 SQL语句的语法规范"></a>1.2.4 SQL语句的语法规范</h2><ul><li>常用关键字需要大写，库名、表名和字段名称等需要小写</li><li>支持拆行操作，但不能把完整的单词拆开</li><li>数据库名称，表名称和字段名称不使用MySQL的保留字，如果必须使用<code>&#39;&#39;</code>将其括起来</li></ul>]]></content:encoded>
+      
+      <comments>http://mhp8338.github.io/2019/05/26/Java-MySQL/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Learing Git</title>
+      <link>http://mhp8338.github.io/2019/05/23/Learing-Git/</link>
+      <guid>http://mhp8338.github.io/2019/05/23/Learing-Git/</guid>
+      <pubDate>Thu, 23 May 2019 01:48:55 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;创建-Git-版本库&quot;&gt;&lt;a href=&quot;#创建-Git-版本库&quot; class=&quot;headerlink&quot; title=&quot;创建 Git 版本库&quot;&gt;&lt;/a&gt;创建 Git 版本库&lt;/h1&gt;&lt;p&gt;版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="创建-Git-版本库"><a href="#创建-Git-版本库" class="headerlink" title="创建 Git 版本库"></a>创建 Git 版本库</h1><p>版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。<br>具体过程如下：</p><ul><li><p>创建空目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir learngit</span><br><span class="line">cd learngit</span><br></pre></td></tr></table></figure></li><li><p>将该目录变成 Git 所管理的仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></li><li><p>编写 readme.txt</p></li><li><p>把文件添加仓库缓存区<code>stage</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br></pre></td></tr></table></figure></li><li><p>提交更改，把缓存区内容提交至当前分支<code>master</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;wrote a readme file&quot;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2019/05/23/5ce6857441eb128759.jpg" alt="0.jpg"></p></li></ul><h1 id="修改-git-文件"><a href="#修改-git-文件" class="headerlink" title="修改 git 文件"></a>修改 git 文件</h1><ul><li>修改 readme.txt 文件</li><li><p>查看修改修改状态，但此时还未提交修改。并且只能显示已经修改，并未显示具体修改的内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></li><li><p>查看具体修改的内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure></li><li><p>添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br><span class="line">git commit -m &quot;add distritbuted&quot;</span><br></pre></td></tr></table></figure></li></ul><h1 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h1><ul><li><p>查看历史记录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log --pretty=oneline</span><br></pre></td></tr></table></figure></li><li><p>回退版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard Head^</span><br><span class="line">git reset --hard Head~100</span><br></pre></td></tr></table></figure></li><li><p>还原版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &#123;commit id&#125;</span><br></pre></td></tr></table></figure></li><li><p>查看文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat readme.txt</span><br></pre></td></tr></table></figure></li><li><p>查找之前每一次命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure></li></ul><h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><ul><li><p>提交缓存区</p><p><img src="https://i.loli.net/2019/05/23/5ce686ef3473670281.jpg" alt="1.jpg"></p></li><li><p>提交分支</p><p><img src="https://i.loli.net/2019/05/23/5ce6873f35e5257129.jpg" alt="2.jpg"></p></li></ul><blockquote><p>git管理修改，并非管理文件。<br>第一次修改 -&gt; git add -&gt; 第二次修改 -&gt; git add -&gt; git commit</p></blockquote>]]></content:encoded>
+      
+      <comments>http://mhp8338.github.io/2019/05/23/Learing-Git/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
