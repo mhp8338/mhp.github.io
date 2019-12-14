@@ -124,18 +124,18 @@
 
 
 
-  <meta name="description" content="（一）初始 vim1.1 vim 编辑插入模式insert-&amp;gt;normal:escnormal-&amp;gt;insert:  i:insert光标前插入 a:append光标后插入 o:open a line below当前行的下一行插入 A:append after line当前行最后插入 I:insert before line当前行最前方插入 O:append a line above当前">
-<meta name="keywords" content="vim">
+  <meta name="description" content="单例设计模式保证一个类仅有一个实例，并提供一个全局的访问点。类型：创建型使用场景：确保任何情况下绝对仅有一个实例线程池、数据库连接池 优点：仅有一个实例，减少内存开销避免对资源文件多重占用严格控制访问 缺点：无接口，拓展困难 重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射攻击 单例模式：懒汉式、饿汉式 懒汉式单例设计模式123456789101112131415161718192">
+<meta name="keywords" content="Design Mode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim">
-<meta property="og:url" content="http://mhp8338.github.io/2019/05/27/vim/index.html">
+<meta property="og:title" content="设计模式（一）————单例模式">
+<meta property="og:url" content="http://mhp8338.github.io/2019/12/14/设计模式（一）————单例模式/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="（一）初始 vim1.1 vim 编辑插入模式insert-&amp;gt;normal:escnormal-&amp;gt;insert:  i:insert光标前插入 a:append光标后插入 o:open a line below当前行的下一行插入 A:append after line当前行最后插入 I:insert before line当前行最前方插入 O:append a line above当前">
+<meta property="og:description" content="单例设计模式保证一个类仅有一个实例，并提供一个全局的访问点。类型：创建型使用场景：确保任何情况下绝对仅有一个实例线程池、数据库连接池 优点：仅有一个实例，减少内存开销避免对资源文件多重占用严格控制访问 缺点：无接口，拓展困难 重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射攻击 单例模式：懒汉式、饿汉式 懒汉式单例设计模式123456789101112131415161718192">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-12T02:14:34.000Z">
+<meta property="og:updated_time" content="2019-12-14T07:11:04.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim">
-<meta name="twitter:description" content="（一）初始 vim1.1 vim 编辑插入模式insert-&amp;gt;normal:escnormal-&amp;gt;insert:  i:insert光标前插入 a:append光标后插入 o:open a line below当前行的下一行插入 A:append after line当前行最后插入 I:insert before line当前行最前方插入 O:append a line above当前">
+<meta name="twitter:title" content="设计模式（一）————单例模式">
+<meta name="twitter:description" content="单例设计模式保证一个类仅有一个实例，并提供一个全局的访问点。类型：创建型使用场景：确保任何情况下绝对仅有一个实例线程池、数据库连接池 优点：仅有一个实例，减少内存开销避免对资源文件多重占用严格控制访问 缺点：无接口，拓展困难 重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射攻击 单例模式：懒汉式、饿汉式 懒汉式单例设计模式123456789101112131415161718192">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <link rel="canonical" href="http://mhp8338.github.io/2019/05/27/vim/">
+  <link rel="canonical" href="http://mhp8338.github.io/2019/12/14/设计模式（一）————单例模式/">
 
 
 
@@ -154,7 +154,7 @@
   };
 </script>
 
-  <title>vim | Hexo</title>
+  <title>设计模式（一）————单例模式 | Hexo</title>
   
 
 
@@ -418,7 +418,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mhp8338.github.io/2019/05/27/vim/">
+    <link itemprop="mainEntityOfPage" href="http://mhp8338.github.io/2019/12/14/设计模式（一）————单例模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mhp">
@@ -435,7 +435,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim
+          <h1 class="post-title" itemprop="name headline">设计模式（一）————单例模式
 
               
             
@@ -462,47 +462,17 @@
                 
               
 
-              <time title="创建时间：2019-05-27 09:50:37" itemprop="dateCreated datePublished" datetime="2019-05-27T09:50:37+08:00">2019-05-27</time>
+              <time title="创建时间：2019-12-14 15:10:06 / 修改时间：15:11:04" itemprop="dateCreated datePublished" datetime="2019-12-14T15:10:06+08:00">2019-12-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-12 10:14:34" itemprop="dateModified" datetime="2019-06-12T10:14:34+08:00">2019-06-12</time>
               
             
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vim/" itemprop="url" rel="index"><span itemprop="name">vim</span></a></span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -511,7 +481,7 @@
 
           
           
-            <span id="/2019/05/27/vim/" class="leancloud_visitors" data-flag-title="vim">
+            <span id="/2019/12/14/设计模式（一）————单例模式/" class="leancloud_visitors" data-flag-title="设计模式（一）————单例模式">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -542,86 +512,45 @@
       
 
       
-        <h1 id="（一）初始-vim"><a href="#（一）初始-vim" class="headerlink" title="（一）初始 vim"></a>（一）初始 vim</h1><h2 id="1-1-vim-编辑插入模式"><a href="#1-1-vim-编辑插入模式" class="headerlink" title="1.1 vim 编辑插入模式"></a>1.1 vim 编辑插入模式</h2><p>insert-&gt;normal:<code>esc</code><br>normal-&gt;insert:</p>
+        <h1 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h1><p>保证一个类仅有一个实例，并提供一个全局的访问点。<br>类型：创建型<br>使用场景：确保任何情况下绝对仅有一个实例<br>线程池、数据库连接池</p>
+<p>优点：仅有一个实例，减少内存开销<br>避免对资源文件多重占用<br>严格控制访问</p>
+<p>缺点：无接口，拓展困难</p>
+<p>重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射攻击</p>
+<p>单例模式：懒汉式、饿汉式</p>
+<h2 id="懒汉式单例设计模式"><a href="#懒汉式单例设计模式" class="headerlink" title="懒汉式单例设计模式"></a>懒汉式单例设计模式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 初始化懒加载</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton lazySingleton = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 私有构造方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 静态方法public方法，获得实例</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> lazySingleton</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(lazySingleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">            lazySingleton = <span class="keyword">new</span> LazySingleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lazySingleton;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>单线程可用，但多线程会破坏单例契约，线程不安全</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingletonTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 检测线程是否安全</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span> </span>&#123;</span><br><span class="line">        <span class="comment">//    LazySingleton lazySingleton = new LazySingleton(); 私有构造方法无法创建实例</span></span><br><span class="line">        Thread t1 = <span class="keyword">new</span> Thread( <span class="keyword">new</span> T() );</span><br><span class="line">        Thread t2 = <span class="keyword">new</span> Thread( <span class="keyword">new</span> T() );</span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">        System.out.println(<span class="string">"Program End..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">T</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LazySingleton lazySingleton = LazySingleton.getInstance();</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+ <span class="string">"  "</span>+lazySingleton);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Debug调试，令两个线程都溜入该单例模式的20行中，闷声发大财。<strong>两个线程均产生各自的对象</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Thread-0  singleton.LazySingleton@15082754</span><br><span class="line">Thread-1  singleton.LazySingleton@16fea746</span><br><span class="line">Program End...</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong>：在方法中添加synchronized，锁定整个类，<strong>当一个线程创建单例时，会阻塞其他线程进入该类</strong><br>synchronized:</p>
 <ul>
-<li><code>i:insert</code>光标前插入</li>
-<li><code>a:append</code>光标后插入</li>
-<li><code>o:open a line below</code>当前行的下一行插入</li>
-<li><code>A:append after line</code>当前行最后插入</li>
-<li><code>I:insert before line</code>当前行最前方插入</li>
-<li><code>O:append a line above</code>当前行的上一行插入</li>
+<li>加在到静态方法中，锁定整个class文件</li>
+<li>加在非静态方法中，锁的是堆内存中的对象</li>
 </ul>
-<p>保存和退出:<code>wq</code></p>
-<h2 id="1-2-vim-的多种模式"><a href="#1-2-vim-的多种模式" class="headerlink" title="1.2 vim 的多种模式"></a>1.2 vim 的多种模式</h2><ul>
-<li>normal:<ul>
-<li>各种命令操作和移动</li>
-<li>大部分情况下在浏览而不是编辑</li>
-</ul>
-</li>
-<li>insert：</li>
-<li>command:<ul>
-<li>保存和关闭<code>:wq</code></li>
-<li>分屏：<code>:vs</code>(竖分屏 vertical screen) <code>:sp</code>(横分屏 split)</li>
-<li>全局替换：<code>:s/foo/bar/g</code>-&gt;<code>:s/python/java/g</code></li>
-</ul>
-</li>
-<li>visual:<ul>
-<li>Normal 模式下<code>v</code>进入 visual</li>
-<li>使用<code>V</code>选择行</li>
-<li><code>ctrl+v</code>块状选择文本</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-3-vim-插入模式技巧"><a href="#1-3-vim-插入模式技巧" class="headerlink" title="1.3 vim 插入模式技巧"></a>1.3 vim 插入模式技巧</h2><p><code>ctrl+h</code>:删除上一个字符<br><code>ctrl+w</code>:删除上一个单词<br><code>ctrl+u</code>:删除当前行<br><code>ctrl+[</code>:切换 esc<br><code>gi</code>:快速跳转到最后一次编辑的地方进入插入模式</p>
-<h2 id="1-4-vim-快速移动"><a href="#1-4-vim-快速移动" class="headerlink" title="1.4 vim 快速移动"></a>1.4 vim 快速移动</h2><p><code>w/W</code>移动到下一个 word/WORD 开头<br><code>e/E</code>移动到下一个 word/WORD 结尾<br><code>b/B</code>移动到上一个 word/WORD 开头<br>WORD 以空白符分割的单词，word 以非空白符分割的单词<br>行间搜索移动：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(lazySingleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">            lazySingleton = <span class="keyword">new</span> LazySingleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lazySingleton;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">synchronized</span>(LazySingleton<span class="class">.<span class="keyword">class</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(lazySingleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">                lazySingleton = <span class="keyword">new</span> LazySingleton();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lazySingleton;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>###懒汉式单例模式进化——Double Check Lazy Singleton</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazyDoubleCheckSingleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * volatile解决由重排序而产生的空指针异常，volatile中不允许重排序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> LazyDoubleCheckSingleton lazyDoubleCheckSingleton = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazyDoubleCheckSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LazyDoubleCheckSingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(lazyDoubleCheckSingleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> ( LazyDoubleCheckSingleton<span class="class">.<span class="keyword">class</span> )</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(lazyDoubleCheckSingleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    <span class="comment">/*</span></span><br><span class="line"><span class="comment">                     * 1.给对象分配内存</span></span><br><span class="line"><span class="comment">                     * 2.初始化对象</span></span><br><span class="line"><span class="comment">                     * 3.设置lazyDoubleCheckSingleton指向刚分配的内存地址</span></span><br><span class="line"><span class="comment">                     * 所有线程在执行java程序时必须要遵守intra-thread semantics</span></span><br><span class="line"><span class="comment">					 * 保证重排序不会改变单线程内的排序结果</span></span><br><span class="line"><span class="comment">                     *</span></span><br><span class="line"><span class="comment">                     */</span></span><br><span class="line">                    lazyDoubleCheckSingleton = <span class="keyword">new</span> LazyDoubleCheckSingleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lazyDoubleCheckSingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>性能优化：</p>
 <ul>
-<li><code>f/F</code>跳转到目标字符(前面搜索/后边搜索)</li>
-<li><code>;/,</code>搜寻到下一个/上一个<br>水平移动:</li>
-<li><code>0</code><strong>移动到行首</strong>，<code>^</code>移动到第一非空白字符=<strong><code>0+w</code></strong></li>
-<li><code>$</code><strong>移动到行尾</strong>，<code>g_</code>移动到行尾非空白字符</li>
+<li>添加判断，减少synchronize锁的使用</li>
+<li>volatile修饰变量，解决由重排序而引起的空指针异常，解决方式是不允许重排序</li>
 </ul>
-<p>垂直移动：</p>
+<h3 id="静态内部类单例模式"><a href="#静态内部类单例模式" class="headerlink" title="静态内部类单例模式"></a>静态内部类单例模式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInnerClassSingleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 私有构造方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">StaticInnerClassSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 静态内部类</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> StaticInnerClassSingleton staticInnerClassSingleton = <span class="keyword">new</span> StaticInnerClassSingleton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> Instance</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> StaticInnerClassSingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> InnerClass.staticInnerClassSingleton;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原理：</p>
 <ul>
-<li><code>(</code>和<code>)</code>句子之间移动</li>
-<li><code>{</code>和<code>}</code>段落之间移动</li>
+<li>类初始化时将获得初始化锁，使得对象初始化的过程（重排序）对其他线程不可见。</li>
+<li>基于类初始化的延迟单例解决方案</li>
 </ul>
-<p>页面移动：</p>
+<h3 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h3><p>饿汉式单例模式：类加载时就初始化完成，可以用final修饰，可用静态代码块的方式创建实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HungrySingleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建实例，直接初始化</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="comment">//    private static final HungrySingleton hungrySingleton = new HungrySingleton();</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> HungrySingleton hungrySingleton;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        hungrySingleton = <span class="keyword">new</span> HungrySingleton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造方法私有</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">HungrySingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 单例方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> HungrySingleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hungrySingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>gg/G</code>移动到文件的开头和结尾，<code>ctrl+o</code>快速返回</li>
-<li><code>H/M/L</code>跳转到屏幕的开头(Head)、中间(Middle)和结尾(Lower)</li>
-<li><code>ctrl+u/f</code>上下翻页(upword,forword)</li>
-<li><code>zz</code>把屏幕置于中间</li>
+<li>浪费资源</li>
+<li>线程安全</li>
 </ul>
-<h2 id="1-5-vim的增删改查"><a href="#1-5-vim的增删改查" class="headerlink" title="1.5 vim的增删改查"></a>1.5 vim的增删改查</h2><h3 id="1-5-1-vim增加字符"><a href="#1-5-1-vim增加字符" class="headerlink" title="1.5.1 vim增加字符"></a>1.5.1 vim增加字符</h3><ul>
-<li>增加字符就是插入模式</li>
-<li>iao</li>
-<li>IAO<h3 id="1-5-2-vim删减"><a href="#1-5-2-vim删减" class="headerlink" title="1.5.2 vim删减"></a>1.5.2 vim删减</h3></li>
-<li>x也可以删除</li>
-<li>daw删除单词</li>
-<li>diw不删除空格</li>
-<li>dd删除行</li>
-<li>dt)删除右括号里的内容 </li>
-<li>d配合visual模式的使用<h3 id="1-5-3-vim快速修改"><a href="#1-5-3-vim快速修改" class="headerlink" title="1.5.3 vim快速修改"></a>1.5.3 vim快速修改</h3>常用有三个：</li>
-<li>c(change):配合文本删除字符进入插入模式<code>c+(a)+w</code> <code>C</code> <code>ctg</code></li>
-<li>r(replace):快速修改</li>
-<li>s(substitude):删除当前字符进入插入模式<h3 id="1-5-4-vim快速查询"><a href="#1-5-4-vim快速查询" class="headerlink" title="1.5.4 vim快速查询"></a>1.5.4 vim快速查询</h3>查询单词也是一种常用操作：</li>
-<li>使用<code>\</code>或者<code>?</code>进行前向或者反向操作</li>
-<li>使用<code>n</code>或者<code>N</code>跳转下一个或者上一个匹配</li>
-<li>使用<code>*</code>或者<code>#</code>进行当前单词的前向和后向匹配 <h2 id="vimrc"><a href="#vimrc" class="headerlink" title="vimrc"></a>vimrc</h2></li>
-</ul>
-<p>vimrc 的几点说明：</p>
-<ul>
-<li>vimrc=vim run command</li>
-<li>系统级 vimrc 和用户级 vimrc<ul>
-<li>系统级：所用用户都生效</li>
-<li>用户级：不同用户命令生效状态不同</li>
-<li>每一行作为一个命令而执行</li>
-</ul>
-</li>
-</ul>
-<h2 id="vim删除"><a href="#vim删除" class="headerlink" title="vim删除"></a>vim删除</h2><ul>
-<li><code>d$</code>删除光标后的改行部分</li>
-</ul>
+<p><strong>序列化和反序列化破坏单例模式</strong><br><strong>反射破坏单例模式</strong>：无参构造方法的反射破坏——懒汉式无法防御</p>
+<p>反射防御</p>
+<p>枚举类实现单例模式</p>
 
       
     </div>
@@ -654,7 +583,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vim/" rel="tag"><i class="fa fa-tag"></i> vim</a>
+            <a href="/tags/Design-Mode/" rel="tag"><i class="fa fa-tag"></i> Design Mode</a>
           
         </div>
       
@@ -667,8 +596,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/26/Java-MySQL/" rel="next" title="Java MySQL">
-                <i class="fa fa-chevron-left"></i> Java MySQL
+              <a href="/2019/12/11/线程池-骚操作/" rel="next" title="线程池---骚操作">
+                <i class="fa fa-chevron-left"></i> 线程池---骚操作
               </a>
             
           </div>
@@ -676,10 +605,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/11/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -863,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#（一）初始-vim"><span class="nav-text">（一）初始 vim</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-vim-编辑插入模式"><span class="nav-text">1.1 vim 编辑插入模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-vim-的多种模式"><span class="nav-text">1.2 vim 的多种模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-vim-插入模式技巧"><span class="nav-text">1.3 vim 插入模式技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-vim-快速移动"><span class="nav-text">1.4 vim 快速移动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-vim的增删改查"><span class="nav-text">1.5 vim的增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-vim增加字符"><span class="nav-text">1.5.1 vim增加字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-vim删减"><span class="nav-text">1.5.2 vim删减</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-vim快速修改"><span class="nav-text">1.5.3 vim快速修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-4-vim快速查询"><span class="nav-text">1.5.4 vim快速查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vimrc"><span class="nav-text">vimrc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim删除"><span class="nav-text">vim删除</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单例设计模式"><span class="nav-text">单例设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#懒汉式单例设计模式"><span class="nav-text">懒汉式单例设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态内部类单例模式"><span class="nav-text">静态内部类单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式单例模式"><span class="nav-text">饿汉式单例模式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1344,37 +1269,38 @@
   
   <script>
     
-    function addCount(Counter) {
+    function showTime(Counter) {
+      var entries = [];
       var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
 
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
         .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
-                .done(function() {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function() {
-                  console.log('Failed to create');
-                });
-            
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1399,7 +1325,9 @@
             });
           };
           
-            addCount(Counter);
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
           
         });
     });
