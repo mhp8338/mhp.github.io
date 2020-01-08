@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hadoop入门（一）——HDFS</title>
+    <title>Hadoop入门（一）—— HDFS</title>
     <url>/2020/01/08/Hadoop%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94HDFS/</url>
-    <content><![CDATA[<p>#1 Hadoop入门（一）——HDFS</p>
-<p>##1.1 HDFS概述<br><a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" title="HDFS(Hadoop Distributed File System)" target="_blank" rel="noopener">HDFS(Hadoop Distributed File System)</a>:</p>
+    <content><![CDATA[<h1 id="1-Hadoop入门（一）——HDFS"><a href="#1-Hadoop入门（一）——HDFS" class="headerlink" title="1 Hadoop入门（一）——HDFS"></a>1 Hadoop入门（一）——HDFS</h1><h2 id="1-1-HDFS概述"><a href="#1-1-HDFS概述" class="headerlink" title="1.1 HDFS概述"></a>1.1 HDFS概述</h2><p><a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" title="HDFS(Hadoop Distributed File System)" target="_blank" rel="noopener">HDFS(Hadoop Distributed File System)</a>:</p>
 <ul>
 <li>分布式</li>
 <li>commodity hardware(可运行于廉价的硬件上)</li>
@@ -12,8 +11,7 @@
 <li>high throughout (高吞吐量)</li>
 <li>large data sets (大数据集)</li>
 </ul>
-<p>##1.2 分布式文件系统</p>
-<p>###1.2.1 传统文件系统特性<br>Linux、Windows、Mac：</p>
+<h2 id="1-2-分布式文件系统"><a href="#1-2-分布式文件系统" class="headerlink" title="1.2 分布式文件系统"></a>1.2 分布式文件系统</h2><h3 id="1-2-1-传统文件系统特性"><a href="#1-2-1-传统文件系统特性" class="headerlink" title="1.2.1 传统文件系统特性"></a>1.2.1 传统文件系统特性</h3><p>Linux、Windows、Mac：</p>
 <ul>
 <li>根目录：/  C </li>
 <li>存放的是文件或者文件夹</li>
@@ -33,13 +31,11 @@
 </tr>
 </tbody>
 </table>
-<p>##1.3 HDFS的前提和设计目标</p>
-<p>###Hardware Failure<br>硬件的故障，是一种常见异常，为了减少该异常的影响（也就是容错），每个机器只存储文件的一部分，即一个block。<strong>将一个文件拆分为多个block，然后分别打入不同的机器中</strong>。</p>
-<p>###Streaming Data Access<br>The emphasis is on high throughput of data access rather than low latency of data access.<br>高吞吐量而不是低延时——不适合做实时处理</p>
+<h2 id="1-3-HDFS的前提和设计目标"><a href="#1-3-HDFS的前提和设计目标" class="headerlink" title="1.3 HDFS的前提和设计目标"></a>1.3 HDFS的前提和设计目标</h2><h3 id="Hardware-Failure"><a href="#Hardware-Failure" class="headerlink" title="Hardware Failure"></a>Hardware Failure</h3><p>硬件的故障，是一种常见异常，为了减少该异常的影响（也就是容错），每个机器只存储文件的一部分，即一个block。<strong>将一个文件拆分为多个block，然后分别打入不同的机器中</strong>。</p>
+<h3 id="Streaming-Data-Access"><a href="#Streaming-Data-Access" class="headerlink" title="Streaming Data Access"></a>Streaming Data Access</h3><p>The emphasis is on high throughput of data access rather than low latency of data access.<br>高吞吐量而不是低延时——不适合做实时处理</p>
 <h3 id="Large-Data-Sets"><a href="#Large-Data-Sets" class="headerlink" title="Large Data Sets"></a>Large Data Sets</h3><p>支持大规模数据存储，不怕数据大，怕数据小</p>
-<p>###“Moving Computation is Cheaper than Moving Data”<br>移动数据成本高 &gt;&gt; 移动计算省掉很多资源</p>
-<p>##1.4 HDFS的架构</p>
-<ul>
+<h3 id="“Moving-Computation-is-Cheaper-than-Moving-Data”"><a href="#“Moving-Computation-is-Cheaper-than-Moving-Data”" class="headerlink" title="“Moving Computation is Cheaper than Moving Data”"></a>“Moving Computation is Cheaper than Moving Data”</h3><p>移动数据成本高 &gt;&gt; 移动计算省掉很多资源</p>
+<h2 id="1-4-HDFS的架构"><a href="#1-4-HDFS的架构" class="headerlink" title="1.4 HDFS的架构"></a>1.4 HDFS的架构</h2><ul>
 <li>NameNode(master) and DataNodes(slave)</li>
 <li>master/slave architecture</li>
 </ul>
