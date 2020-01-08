@@ -94,7 +94,8 @@ export PATH
 </code></pre>
 ]]></content>
       <categories>
-        <category>Hadoop HDFS</category>
+        <category>Hadoop</category>
+        <category>HDFS</category>
       </categories>
       <tags>
         <tag>Hadoop HDFS</tag>
@@ -196,6 +197,7 @@ export PATH
 ]]></content>
       <categories>
         <category>Hadoop</category>
+        <category>HDFS</category>
       </categories>
       <tags>
         <tag>Hadoop</tag>
