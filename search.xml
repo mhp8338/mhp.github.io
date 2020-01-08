@@ -399,7 +399,7 @@ public static LazySingleton getInstance(){
     <url>/2019/12/11/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E9%AA%9A%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><h2 id="效果对比"><a href="#效果对比" class="headerlink" title="效果对比"></a>效果对比</h2><ul>
 <li>普通线程的启动方式</li>
-<li>利用线程池启动线程的方式<br><a href="https://mhp8338.github.io/2019/12/11/hello-world/">Writing</a></li>
+<li>利用线程池启动线程的方式<br><a href="https://mhp8338.github.io/2019/12/11/hello-world/" target="_blank" rel="noopener">Writing</a></li>
 </ul>
 <h2 id="线程池简介"><a href="#线程池简介" class="headerlink" title="线程池简介"></a>线程池简介</h2><ul>
 <li>降低资源消耗：不用频繁创建销毁资源。</li>
