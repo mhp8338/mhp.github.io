@@ -124,18 +124,21 @@
 
 
 
-  <meta name="description" content="MySQL 数据库的简介1.1 MySQL 数据库的简介和安装1.1.1 什么是数据库？数据库是按数据结构来组织、存储和管理数据的仓库 1.1.1 常见数据库(甲骨文)Oracle、(IBM)DB2、(微软)SQL Server、Postgre SQL、MySQL。MySQL 是典型的关系型数据管理系统 1.1.2 相关术语数据库系统Database System简称 DBS，包含以下部分：  数">
-<meta name="keywords" content="MySQL">
+  <meta name="description" content="#1 Hadoop入门（一）——HDFS ##1.1 HDFS概述HDFS(Hadoop Distributed File System):  分布式 commodity hardware(可运行于廉价的硬件上) fault-tolerant (具有容错性) high throughout (高吞吐量) large data sets (大数据集)  ##1.2 分布式文件系统 ###1.2.1">
+<meta name="keywords" content="Hadoop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java MySQL">
-<meta property="og:url" content="http://mhp8338.github.io/2019/05/26/Java-MySQL/index.html">
+<meta property="og:title" content="Hadoop入门（一）——HDFS">
+<meta property="og:url" content="http://mhp8338.github.io/2020/01/08/Hadoop入门（一）——HDFS/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MySQL 数据库的简介1.1 MySQL 数据库的简介和安装1.1.1 什么是数据库？数据库是按数据结构来组织、存储和管理数据的仓库 1.1.1 常见数据库(甲骨文)Oracle、(IBM)DB2、(微软)SQL Server、Postgre SQL、MySQL。MySQL 是典型的关系型数据管理系统 1.1.2 相关术语数据库系统Database System简称 DBS，包含以下部分：  数">
+<meta property="og:description" content="#1 Hadoop入门（一）——HDFS ##1.1 HDFS概述HDFS(Hadoop Distributed File System):  分布式 commodity hardware(可运行于廉价的硬件上) fault-tolerant (具有容错性) high throughout (高吞吐量) large data sets (大数据集)  ##1.2 分布式文件系统 ###1.2.1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-27T13:12:28.000Z">
+<meta property="og:image" content="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png">
+<meta property="og:image" content="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsdatanodes.png">
+<meta property="og:updated_time" content="2020-01-08T08:06:28.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java MySQL">
-<meta name="twitter:description" content="MySQL 数据库的简介1.1 MySQL 数据库的简介和安装1.1.1 什么是数据库？数据库是按数据结构来组织、存储和管理数据的仓库 1.1.1 常见数据库(甲骨文)Oracle、(IBM)DB2、(微软)SQL Server、Postgre SQL、MySQL。MySQL 是典型的关系型数据管理系统 1.1.2 相关术语数据库系统Database System简称 DBS，包含以下部分：  数">
+<meta name="twitter:title" content="Hadoop入门（一）——HDFS">
+<meta name="twitter:description" content="#1 Hadoop入门（一）——HDFS ##1.1 HDFS概述HDFS(Hadoop Distributed File System):  分布式 commodity hardware(可运行于廉价的硬件上) fault-tolerant (具有容错性) high throughout (高吞吐量) large data sets (大数据集)  ##1.2 分布式文件系统 ###1.2.1">
+<meta name="twitter:image" content="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png">
 
 
 
@@ -144,7 +147,7 @@
 
 
 
-  <link rel="canonical" href="http://mhp8338.github.io/2019/05/26/Java-MySQL/">
+  <link rel="canonical" href="http://mhp8338.github.io/2020/01/08/Hadoop入门（一）——HDFS/">
 
 
 
@@ -154,7 +157,7 @@
   };
 </script>
 
-  <title>Java MySQL | Hexo</title>
+  <title>Hadoop入门（一）——HDFS | Hexo</title>
   
 
 
@@ -418,7 +421,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mhp8338.github.io/2019/05/26/Java-MySQL/">
+    <link itemprop="mainEntityOfPage" href="http://mhp8338.github.io/2020/01/08/Hadoop入门（一）——HDFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mhp">
@@ -435,7 +438,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java MySQL
+          <h1 class="post-title" itemprop="name headline">Hadoop入门（一）——HDFS
 
               
             
@@ -462,24 +465,12 @@
                 
               
 
-              <time title="创建时间：2019-05-26 15:49:56" itemprop="dateCreated datePublished" datetime="2019-05-26T15:49:56+08:00">2019-05-26</time>
+              <time title="创建时间：2020-01-08 16:05:08 / 修改时间：16:06:28" itemprop="dateCreated datePublished" datetime="2020-01-08T16:05:08+08:00">2020-01-08</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-27 21:12:28" itemprop="dateModified" datetime="2019-05-27T21:12:28+08:00">2019-05-27</time>
               
             
           </span>
@@ -496,7 +487,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hadoop/" itemprop="url" rel="index"><span itemprop="name">Hadoop</span></a></span>
 
                 
                 
@@ -511,7 +502,7 @@
 
           
           
-            <span id="/2019/05/26/Java-MySQL/" class="leancloud_visitors" data-flag-title="Java MySQL">
+            <span id="/2020/01/08/Hadoop入门（一）——HDFS/" class="leancloud_visitors" data-flag-title="Hadoop入门（一）——HDFS">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -542,64 +533,100 @@
       
 
       
-        <h1 id="MySQL-数据库的简介"><a href="#MySQL-数据库的简介" class="headerlink" title="MySQL 数据库的简介"></a>MySQL 数据库的简介</h1><h2 id="1-1-MySQL-数据库的简介和安装"><a href="#1-1-MySQL-数据库的简介和安装" class="headerlink" title="1.1 MySQL 数据库的简介和安装"></a>1.1 MySQL 数据库的简介和安装</h2><h3 id="1-1-1-什么是数据库？"><a href="#1-1-1-什么是数据库？" class="headerlink" title="1.1.1 什么是数据库？"></a>1.1.1 什么是数据库？</h3><p>数据库是按数据结构来组织、存储和管理数据的仓库</p>
-<h3 id="1-1-1-常见数据库"><a href="#1-1-1-常见数据库" class="headerlink" title="1.1.1 常见数据库"></a>1.1.1 常见数据库</h3><p>(甲骨文)Oracle、(IBM)DB2、(微软)SQL Server、Postgre SQL、MySQL。<br>MySQL 是典型的关系型数据管理系统</p>
-<h3 id="1-1-2-相关术语"><a href="#1-1-2-相关术语" class="headerlink" title="1.1.2 相关术语"></a>1.1.2 相关术语</h3><p>数据库系统<code>Database System</code>简称 DBS，包含以下部分：</p>
+        <p>#1 Hadoop入门（一）——HDFS</p>
+<p>##1.1 HDFS概述<br><a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" title="HDFS(Hadoop Distributed File System)" target="_blank" rel="noopener">HDFS(Hadoop Distributed File System)</a>:</p>
 <ul>
-<li>数据库<code>Database</code></li>
-<li>数据库管理系统<code>Database Manage System</code>DBMS</li>
-<li>应用开发工具</li>
-<li>管理员及用户</li>
+<li>分布式</li>
+<li>commodity hardware(可运行于廉价的硬件上)</li>
+<li>fault-tolerant (具有容错性)</li>
+<li>high throughout (高吞吐量)</li>
+<li>large data sets (大数据集)</li>
 </ul>
-<h3 id="1-1-3-SQL-语言"><a href="#1-1-3-SQL-语言" class="headerlink" title="1.1.3 SQL 语言"></a>1.1.3 SQL 语言</h3><p>SQL(结构化查询语言 Structured Query Language)</p>
+<p>##1.2 分布式文件系统</p>
+<p>###1.2.1 传统文件系统特性<br>Linux、Windows、Mac：</p>
 <ul>
-<li>DDL:数据定义语言</li>
-<li>DML:数据操控语言<ul>
-<li>增</li>
-<li>删</li>
-<li>改</li>
+<li>根目录：/  C </li>
+<li>存放的是文件或者文件夹</li>
+<li>对外提供服务：创建、修改、删除、查看、移动等等</li>
 </ul>
-</li>
-<li>DQL:数据查询语言<ul>
-<li>查询用户</li>
-</ul>
-</li>
-<li>DCL:数据控制语言<ul>
-<li>控制用户权限</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-MySQL-相关操作"><a href="#1-2-MySQL-相关操作" class="headerlink" title="1.2 MySQL 相关操作"></a>1.2 MySQL 相关操作</h2><h3 id="1-2-1-配置文件"><a href="#1-2-1-配置文件" class="headerlink" title="1.2.1 配置文件"></a>1.2.1 配置文件</h3><ul>
-<li>隐藏文件</li>
-<li>my.conf</li>
-</ul>
-<h3 id="1-2-2-登陆-退出-MySQL"><a href="#1-2-2-登陆-退出-MySQL" class="headerlink" title="1.2.2 登陆/退出 MySQL"></a>1.2.2 登陆/退出 MySQL</h3><p>登陆：</p>
+<h3 id="1-2-2-普通文件系统VS分布式文件系统"><a href="#1-2-2-普通文件系统VS分布式文件系统" class="headerlink" title="1.2.2 普通文件系统VS分布式文件系统"></a>1.2.2 普通文件系统VS分布式文件系统</h3><table>
+<thead>
+<tr>
+<th>普通文件系统</th>
+<th>分布式文件系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单机操作</td>
+<td>能够横跨N个机器</td>
+</tr>
+</tbody>
+</table>
+<p>##1.3 HDFS的前提和设计目标</p>
+<p>###Hardware Failure<br>硬件的故障，是一种常见异常，为了减少该异常的影响（也就是容错），每个机器只存储文件的一部分，即一个block。<strong>将一个文件拆分为多个block，然后分别打入不同的机器中</strong>。</p>
+<p>###Streaming Data Access<br>The emphasis is on high throughput of data access rather than low latency of data access.<br>高吞吐量而不是低延时——不适合做实时处理</p>
+<h3 id="Large-Data-Sets"><a href="#Large-Data-Sets" class="headerlink" title="Large Data Sets"></a>Large Data Sets</h3><p>支持大规模数据存储，不怕数据大，怕数据小</p>
+<p>###“Moving Computation is Cheaper than Moving Data”<br>移动数据成本高 &gt;&gt; 移动计算省掉很多资源</p>
+<p>##1.4 HDFS的架构</p>
 <ul>
-<li><code>mysql -uroot -p</code></li>
-<li><code>mysql -uroot -p0623</code></li>
+<li>NameNode(master) and DataNodes(slave)</li>
+<li>master/slave architecture</li>
 </ul>
-<p>退出:</p>
-<ul>
-<li><code>exit</code></li>
-<li><code>quit</code></li>
-</ul>
-<p>版本：</p>
-<ul>
-<li><code>mysql -V</code></li>
-<li><code>mysql --version</code></li>
-</ul>
-<p>登陆信息中需要掌握：</p>
-<ul>
-<li>登陆过后命令行的结束符使用<code>;</code>或者是<code>\g</code></li>
-<li>可以通过<code>help</code>、<code>\h</code>或<code>?</code>配合关键字查看帮助手册 </li>
-<li><code>\c</code>可以取消当前命令的执行：<code>select user() \c</code></li>
-</ul>
-<h2 id="1-2-3-常用的SQL语句"><a href="#1-2-3-常用的SQL语句" class="headerlink" title="1.2.3 常用的SQL语句"></a>1.2.3 常用的SQL语句</h2><p><code>SELECT USER()</code>:得到登陆的用户<br><code>SELECT VERSION()</code>:得到mysql的版本信息<br><code>SELECT NOW()</code>:得到当前的日期时间<br><code>SELECT DATABASE()</code>:得到当前打开的数据</p>
-<h2 id="1-2-4-SQL语句的语法规范"><a href="#1-2-4-SQL语句的语法规范" class="headerlink" title="1.2.4 SQL语句的语法规范"></a>1.2.4 SQL语句的语法规范</h2><ul>
-<li>常用关键字需要大写，库名、表名和字段名称等需要小写</li>
-<li>支持拆行操作，但不能把完整的单词拆开</li>
-<li>数据库名称，表名称和字段名称不使用MySQL的保留字，如果必须使用<code>&#39;&#39;</code>将其括起来</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>NameNode</th>
+<th>DataNodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master</td>
+<td>slave</td>
+</tr>
+<tr>
+<td>name space</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>管理文件系统</td>
+<td>负责存储文件</td>
+</tr>
+<tr>
+<td>提供客户端对文件的访问</td>
+</tr>
+</tbody>
+</table>
+<p>HDFS exposes a file system namespace and allows user data to be stored in files.</p>
+<h3 id="1-4-1-内部实现"><a href="#1-4-1-内部实现" class="headerlink" title="1.4.1 内部实现"></a>1.4.1 内部实现</h3><p>1) a file is split into one or more blocks:<br> <code>blocksize: 128M</code><br><code>150M -&gt; 128M 22M</code><br>2) these blocks are stored in a set of DataNodes:<br>只为容错啊！</p>
+<p>3) The NameNode executes file system namespace operations like opening, closing, and renaming files and directories :CRUD<br>4) determines the mapping of blocks to DataNodes<br>存放数据的具体位置信息，例如</p>
+<table>
+<thead>
+<tr>
+<th>a.txt</th>
+<th>blocksize</th>
+<th>replication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>150M</td>
+<td>128M</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>namenode 存储如下关系，客户端通过该关系找到a.txt文件<br>block1 : 128M 192.168.199.1<br>block2 :   22M 192.168.199.2<br>GET a.txt  </p>
+<p><strong>用户对该过程不感知</strong><br><img src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png" alt="NameNode and DataNodes" title="NameNode and DataNodes"></p>
+<p>5)通常情况下，一个node部署一个机器，但也可以一台机器部署多个node</p>
+<h2 id="1-5-文件系统namespace详解"><a href="#1-5-文件系统namespace详解" class="headerlink" title="1.5 文件系统namespace详解"></a>1.5 文件系统namespace详解</h2><blockquote>
+<p>HDFS supports a traditional hierarchical file organization. A user or an application can create directories and store files inside these directories. The file system namespace hierarchy is similar to most other existing file systems; one can create and remove files, move a file from one directory to another, or rename a file. HDFS supports user quotas and access permissions. HDFS does not support hard links or soft links. However, the HDFS architecture does not preclude implementing these features.</p>
+</blockquote>
+<h2 id="1-6-Data-Replication"><a href="#1-6-Data-Replication" class="headerlink" title="1.6 Data Replication"></a>1.6 Data Replication</h2><blockquote>
+<p>HDFS is designed to reliably store very large files across machines in a large cluster. It stores each file as a sequence of blocks. The blocks of a file are replicated for fault tolerance. The block size and replication factor are configurable per file.</p>
+</blockquote>
+<p><img src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsdatanodes.png" alt="replication" title="replication"></p>
 
       
     </div>
@@ -632,7 +659,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+            <a href="/tags/Hadoop/" rel="tag"><i class="fa fa-tag"></i> Hadoop</a>
           
         </div>
       
@@ -645,8 +672,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/23/Learing-Git/" rel="next" title="Learing Git">
-                <i class="fa fa-chevron-left"></i> Learing Git
+              <a href="/2019/12/14/设计模式(一)：单例模式/" rel="next" title="设计模式(一)：单例模式">
+                <i class="fa fa-chevron-left"></i> 设计模式(一)：单例模式
               </a>
             
           </div>
@@ -654,10 +681,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/27/vim/" rel="prev" title="vim">
-                vim <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -845,7 +868,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL-数据库的简介"><span class="nav-text">MySQL 数据库的简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-MySQL-数据库的简介和安装"><span class="nav-text">1.1 MySQL 数据库的简介和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-什么是数据库？"><span class="nav-text">1.1.1 什么是数据库？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-常见数据库"><span class="nav-text">1.1.1 常见数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-相关术语"><span class="nav-text">1.1.2 相关术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-SQL-语言"><span class="nav-text">1.1.3 SQL 语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-MySQL-相关操作"><span class="nav-text">1.2 MySQL 相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-配置文件"><span class="nav-text">1.2.1 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-登陆-退出-MySQL"><span class="nav-text">1.2.2 登陆/退出 MySQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-3-常用的SQL语句"><span class="nav-text">1.2.3 常用的SQL语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-4-SQL语句的语法规范"><span class="nav-text">1.2.4 SQL语句的语法规范</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-普通文件系统VS分布式文件系统"><span class="nav-text">1.2.2 普通文件系统VS分布式文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Large-Data-Sets"><span class="nav-text">Large Data Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-内部实现"><span class="nav-text">1.4.1 内部实现</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-文件系统namespace详解"><span class="nav-text">1.5 文件系统namespace详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Data-Replication"><span class="nav-text">1.6 Data Replication</span></a></li></div>
             
 
           </div>

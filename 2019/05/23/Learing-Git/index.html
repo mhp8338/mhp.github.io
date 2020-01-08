@@ -124,13 +124,13 @@
 
 
 
-  <meta name="description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录 12mkdir learngitcd learngit  将该目录变成 Git 所管理的仓库 1git init  编写 readme.txt  把文件添加仓库缓存区stage 1git add readme.txt  提交更">
+  <meta name="description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录  mkdir learngit   cd learngit  将该目录变成 Git 所管理的仓库git init  编写 readme.txt 把文件添加仓库缓存区stagegit add readme.txt  提交更改，把">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learing Git">
 <meta property="og:url" content="http://mhp8338.github.io/2019/05/23/Learing-Git/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录 12mkdir learngitcd learngit  将该目录变成 Git 所管理的仓库 1git init  编写 readme.txt  把文件添加仓库缓存区stage 1git add readme.txt  提交更">
+<meta property="og:description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录  mkdir learngit   cd learngit  将该目录变成 Git 所管理的仓库git init  编写 readme.txt 把文件添加仓库缓存区stagegit add readme.txt  提交更改，把">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/05/23/5ce6857441eb128759.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/05/23/5ce686ef3473670281.jpg">
@@ -138,7 +138,7 @@
 <meta property="og:updated_time" content="2019-05-23T11:50:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learing Git">
-<meta name="twitter:description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录 12mkdir learngitcd learngit  将该目录变成 Git 所管理的仓库 1git init  编写 readme.txt  把文件添加仓库缓存区stage 1git add readme.txt  提交更">
+<meta name="twitter:description" content="创建 Git 版本库版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。具体过程如下：  创建空目录  mkdir learngit   cd learngit  将该目录变成 Git 所管理的仓库git init  编写 readme.txt 把文件添加仓库缓存区stagegit add readme.txt  提交更改，把">
 <meta name="twitter:image" content="https://i.loli.net/2019/05/23/5ce6857441eb128759.jpg">
 
 
@@ -294,7 +294,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">6</span></a>
 
   </li>
         
@@ -313,7 +313,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
 
   </li>
         
@@ -332,7 +332,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">6</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">7</span></a>
 
   </li>
 
@@ -536,52 +536,41 @@
       
         <h1 id="创建-Git-版本库"><a href="#创建-Git-版本库" class="headerlink" title="创建 Git 版本库"></a>创建 Git 版本库</h1><p>版本库就是一个目录，在该目录下所有文件都受 Git 的管理，Git 可以跟踪每个文件的修改和删除，任何时刻都可以追踪和还原。<br>具体过程如下：</p>
 <ul>
-<li><p>创建空目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir learngit</span><br><span class="line">cd learngit</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将该目录变成 Git 所管理的仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编写 readme.txt</p>
-</li>
-<li><p>把文件添加仓库缓存区<code>stage</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>提交更改，把缓存区内容提交至当前分支<code>master</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;wrote a readme file&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/05/23/5ce6857441eb128759.jpg" alt="0.jpg"></p>
-</li>
+<li>创建空目录<pre><code>  mkdir learngit
+  cd learngit
+</code></pre></li>
+<li>将该目录变成 Git 所管理的仓库<pre><code>git init
+</code></pre></li>
+<li>编写 readme.txt</li>
+<li>把文件添加仓库缓存区<code>stage</code><pre><code>git add readme.txt
+</code></pre></li>
+<li>提交更改，把缓存区内容提交至当前分支<code>master</code><pre><code>git commit -m &quot;wrote a readme file&quot;
+</code></pre><img src="https://i.loli.net/2019/05/23/5ce6857441eb128759.jpg" alt="0.jpg"></li>
 </ul>
 <h1 id="修改-git-文件"><a href="#修改-git-文件" class="headerlink" title="修改 git 文件"></a>修改 git 文件</h1><ul>
 <li>修改 readme.txt 文件</li>
-<li><p>查看修改修改状态，但此时还未提交修改。并且只能显示已经修改，并未显示具体修改的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看具体修改的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br><span class="line">git commit -m &quot;add distritbuted&quot;</span><br></pre></td></tr></table></figure>
-</li>
+<li>查看修改修改状态，但此时还未提交修改。并且只能显示已经修改，并未显示具体修改的内容<pre><code>git status
+</code></pre></li>
+<li>查看具体修改的内容<pre><code>git diff
+</code></pre></li>
+<li>添加<pre><code>git add readme.txt
+git commit -m &quot;add distritbuted&quot;
+</code></pre></li>
 </ul>
 <h1 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h1><ul>
-<li><p>查看历史记录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log --pretty=oneline</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>回退版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard Head^</span><br><span class="line">git reset --hard Head~100</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>还原版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &#123;commit id&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat readme.txt</span><br></pre></td></tr></table></figure>
-</li>
+<li>查看历史记录<pre><code>git log
+git log --pretty=oneline
+</code></pre></li>
+<li>回退版本<pre><code>git reset --hard Head^
+git reset --hard Head~100
+</code></pre></li>
+<li>还原版本<pre><code>git reset --hard {commit id}
+</code></pre></li>
+<li>查看文件<pre><code>cat readme.txt
+</code></pre></li>
 <li><p>查找之前每一次命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><ul>
+<pre><code>git reflog
+</code></pre><h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1></li>
 <li><p>提交缓存区</p>
 <p><img src="https://i.loli.net/2019/05/23/5ce686ef3473670281.jpg" alt="1.jpg"></p>
 </li>
@@ -716,7 +705,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -737,7 +726,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -760,7 +751,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -850,7 +843,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
