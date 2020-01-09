@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="菜鸟程序猿的小窝">
 <meta property="og:description" content="1 Hadoop入门（二）—— 搭建单节点的Hadoop环境 服务器环境：centos 7 客户端环境：Mac shell ssh 连接:ssh username@ip  mkdir创建文件夹：    filename description     app 存放使用的软件安装包   app 存放使用的软件安装目录   data 存放使用的数据   lib 存放需求的jar存放的目录   shel">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-08T10:59:38.631Z">
+<meta property="og:updated_time" content="2020-01-09T09:14:53.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop入门（二）—— 搭建单节点的Hadoop环境">
 <meta name="twitter:description" content="1 Hadoop入门（二）—— 搭建单节点的Hadoop环境 服务器环境：centos 7 客户端环境：Mac shell ssh 连接:ssh username@ip  mkdir创建文件夹：    filename description     app 存放使用的软件安装包   app 存放使用的软件安装目录   data 存放使用的数据   lib 存放需求的jar存放的目录   shel">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  337
+                  1.5k
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  8
                 </span>
               
             </div>
@@ -479,11 +479,12 @@
 </code></pre>
 <p>建立hadoop000与IP的映射，可以直接通过hadoop000访问服务器</p>
 <h2 id="1-2-hadoop-相关环境搭建"><a href="#1-2-hadoop-相关环境搭建" class="headerlink" title="1.2 hadoop 相关环境搭建"></a>1.2 hadoop 相关环境搭建</h2><p>1) Hadoop使用版本：CDH 版本 <a href="https://archive.cloudera.com/cdh5/cdh/5/" title="hadoop-2.6.0-cdh5.15.1/" target="_blank" rel="noopener">hadoop-2.6.0-cdh5.15.1</a><br>2) 版本的尾号必须相同: <code>cdh5.15.1</code><br>3) Hive的使用版本：hive-1.1.0-cdh5.15.1<br>4) java: 1.8<br>5) ssh</p>
-<h2 id="1-3-JDK-1-8环境部署"><a href="#1-3-JDK-1-8环境部署" class="headerlink" title="1.3 JDK 1.8环境部署"></a>1.3 JDK 1.8环境部署</h2><p>1) 从本地拷贝至服务器<br>2) 解压<br>3) 配置环境变量,修改配置文件<br>4) 生效</p>
+<h2 id="1-3-JDK-1-8环境部署"><a href="#1-3-JDK-1-8环境部署" class="headerlink" title="1.3 JDK 1.8环境部署"></a>1.3 JDK 1.8环境部署</h2><p>1) 从本地拷贝至服务器<br>2) 解压<br>3) 配置环境变量,修改配置文件<br>4) 生效<br>5) 验证</p>
 <pre><code class="bash">scp jdk-8u91-linux-x64.tar.gz hadoop@ip:~/software/
 tar -zxvf hadoop-2.6.0-cdh5.15.1.tar.gz -C ~/app/
 sudo vim .bash_profile
 source .bash_profile
+java -version
 </code></pre>
 <pre><code class="bash"># .bash_profile
 
@@ -508,6 +509,190 @@ export PATH=$HIVE_HOME/bin:$PATH
 
 export PATH
 </code></pre>
+<h2 id="1-4-ssh无密码登陆部署"><a href="#1-4-ssh无密码登陆部署" class="headerlink" title="1.4 ssh无密码登陆部署"></a>1.4 ssh无密码登陆部署</h2><p><code>ssh hadoop000</code>每一次登陆都需要密码，影响主从节点通信</p>
+<p>输入：<code>ssh-keygen -t rsa</code><br>进入：<code>cd ~/.ssh</code></p>
+<pre><code class="shell">-rw------- 1 hadoop hadoop  398 10月 15 2018 authorized_keys
+-rw------- 1 hadoop hadoop 1679 10月 15 2018 id_rsa //私钥
+-rw-r--r-- 1 hadoop hadoop  398 10月 15 2018 id_rsa.pub //公钥
+-rw-r--r-- 1 hadoop hadoop 1060 1月   7 23:54 known_hosts
+</code></pre>
+<p>将公钥写入authorized_keys</p>
+<pre><code class="shell">cat id_rsa.pub &gt;&gt; authorized_keys
+
+#修改authorized_keys权限
+chmod 600 authorized_keys
+</code></pre>
+<h2 id="1-5-Hadoop-安装"><a href="#1-5-Hadoop-安装" class="headerlink" title="1.5 Hadoop 安装"></a>1.5 Hadoop 安装</h2><p>1) 下载<br>2) 解压:<code>~/app</code><br>3)添加$HADOOP_HOME/bin到系统环境变量</p>
+<h3 id="1-5-1-hadooop软件包常见目录说明"><a href="#1-5-1-hadooop软件包常见目录说明" class="headerlink" title="1.5.1 hadooop软件包常见目录说明"></a>1.5.1 hadooop软件包常见目录说明</h3><pre><code class="shell">drwxr-xr-x  2 hadoop hadoop   137 8月  10 2018 bin
+drwxr-xr-x  2 hadoop hadoop   166 8月  10 2018 bin-mapreduce1
+drwxr-xr-x  3 hadoop hadoop  4096 10月 15 2018 cloudera
+drwxr-xr-x  6 hadoop hadoop   109 8月  10 2018 etc
+drwxr-xr-x  5 hadoop hadoop    43 8月  10 2018 examples
+drwxr-xr-x  3 hadoop hadoop    28 8月  10 2018 examples-mapreduce1
+drwxr-xr-x  2 hadoop hadoop   106 8月  10 2018 include
+drwxr-xr-x  3 hadoop hadoop    20 8月  10 2018 lib
+drwxr-xr-x  3 hadoop hadoop   261 8月  10 2018 libexec
+-rw-r--r--  1 hadoop hadoop 85063 8月  10 2018 LICENSE.txt
+drwxrwxr-x  3 hadoop hadoop  4096 12月  8 2018 logs
+-rw-r--r--  1 hadoop hadoop 14978 8月  10 2018 NOTICE.txt
+-rw-r--r--  1 hadoop hadoop  1366 8月  10 2018 README.txt
+drwxr-xr-x  3 hadoop hadoop  4096 8月  10 2018 sbin
+drwxr-xr-x  4 hadoop hadoop    31 8月  10 2018 share
+drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>软件包</th>
+<th>目录说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bin</td>
+<td>hadoop客户端命令</td>
+</tr>
+<tr>
+<td>etc</td>
+<td>hadoop相关的配置文件</td>
+</tr>
+<tr>
+<td>sbin</td>
+<td>启动Hadoop相关进程的脚本</td>
+</tr>
+<tr>
+<td>examples</td>
+<td>存放案例</td>
+</tr>
+<tr>
+<td>lib</td>
+<td>依赖包</td>
+</tr>
+<tr>
+<td>share</td>
+<td>常用例子</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-2-Hadoop配置"><a href="#1-5-2-Hadoop配置" class="headerlink" title="1.5.2 Hadoop配置"></a>1.5.2 Hadoop配置</h3><p>1) Hadoop-env.sh： 配置Java<br>2) 配置默认的文件系统(主节点)：core-site.xml</p>
+<pre><code class="xml">&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.defaultFS&lt;/name&gt;
+        &lt;value&gt;hdfs://hadoop:8020&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>3) 配置副本系数(单节点)：hdfs-site.xml</p>
+<pre><code class="xml">&lt;configuration&gt;
+   &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>4) 修改临时文件的base目录</p>
+<pre><code class="xml">&lt;configuration&gt;
+   &lt;property&gt;
+        &lt;name&gt;hadoop.tem.dir&lt;/name&gt;
+        &lt;value&gt;/home/hadoop/app/tmp&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>5) 修改从节点:<code>hadoop000</code></p>
+<h3 id="1-5-3-启动hdfs"><a href="#1-5-3-启动hdfs" class="headerlink" title="1.5.3 启动hdfs"></a>1.5.3 启动hdfs</h3><p><strong>第一次执行时一定要格式化文件系统，后期不可重复执行</strong></p>
+<pre><code class="shell">hdfs namenode -format
+</code></pre>
+<p>启动服务：<code>sbin</code>目录下</p>
+<pre><code class="shell">./start-dfs.sh
+</code></pre>
+<p>验证：<br>(1)三个节点</p>
+<pre><code class="shell">jps
+
+20720 NameNode
+21047 SecondaryNameNode
+21181 Jps
+20830 DataNode
+</code></pre>
+<p>如果出现错误：查看日志 <code>/home/hadoop/app/hadoop-2.6.0-cdh5.15.1/logs</code><br>(2) 浏览器验证<br>192.168.215.100:50070 =&gt;关闭防火墙</p>
+<pre><code class="shell">#查看防火墙状态
+firewall-cmd --state
+
+#关闭防火墙
+systemctl stop firewalld.service
+
+#禁止防火墙开机启动
+systemctl disable firewalld.service
+
+</code></pre>
+<h3 id="1-5-4-停止集群以及单个节点启动"><a href="#1-5-4-停止集群以及单个节点启动" class="headerlink" title="1.5.4 停止集群以及单个节点启动"></a>1.5.4 停止集群以及单个节点启动</h3><p>停止dfs：<code>./stop-dfs.sh</code><br>开启某一线程：<code>./hadoop-daemon.sh start namenode</code></p>
+<p>start/stop-dfs.sh与hadoop-daemon.sh的关系：<br>start-dfs.sh =&gt; </p>
+<ul>
+<li>hadoop-daemon.sh start namenode </li>
+<li>hadoop-daemon.sh start datanode </li>
+<li>hadoop-daemon.sh start secondarynamenode</li>
+</ul>
+<h2 id="1-6-HDFS命令行操作"><a href="#1-6-HDFS命令行操作" class="headerlink" title="1.6 HDFS命令行操作"></a>1.6 HDFS命令行操作</h2><p><code>bin</code>目录下的执行<br>hadoop fs [generic options]</p>
+<pre><code class="shell">    [-appendToFile &lt;localsrc&gt; ... &lt;dst&gt;] 
+    [-cat [-ignoreCrc] &lt;src&gt; ...]
+    [-checksum &lt;src&gt; ...]
+    [-chgrp [-R] GROUP PATH...]
+    [-chmod [-R] &lt;MODE[,MODE]... | OCTALMODE&gt; PATH...]
+    [-chown [-R] [OWNER][:[GROUP]] PATH...]
+    [-copyFromLocal [-f] [-p] [-l] &lt;localsrc&gt; ... &lt;dst&gt;]
+    [-copyToLocal [-p] [-ignoreCrc] [-crc] &lt;src&gt; ... &lt;localdst&gt;]
+    [-count [-q] [-h] [-v] [-x] &lt;path&gt; ...]
+    [-cp [-f] [-p | -p[topax]] &lt;src&gt; ... &lt;dst&gt;]
+    [-createSnapshot &lt;snapshotDir&gt; [&lt;snapshotName&gt;]]
+    [-deleteSnapshot &lt;snapshotDir&gt; &lt;snapshotName&gt;]
+    [-df [-h] [&lt;path&gt; ...]]
+    [-du [-s] [-h] [-x] &lt;path&gt; ...]
+    [-expunge]
+    [-find &lt;path&gt; ... &lt;expression&gt; ...]
+    [-get [-p] [-ignoreCrc] [-crc] &lt;src&gt; ... &lt;localdst&gt;]
+    [-getfacl [-R] &lt;path&gt;]
+    [-getfattr [-R] {-n name | -d} [-e en] &lt;path&gt;]
+    [-getmerge [-nl] &lt;src&gt; &lt;localdst&gt;]
+    [-help [cmd ...]]
+    [-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [&lt;path&gt; ...]]
+    [-mkdir [-p] &lt;path&gt; ...]
+    [-moveFromLocal &lt;localsrc&gt; ... &lt;dst&gt;]
+    [-moveToLocal &lt;src&gt; &lt;localdst&gt;]
+    [-mv &lt;src&gt; ... &lt;dst&gt;]
+    [-put [-f] [-p] [-l] &lt;localsrc&gt; ... &lt;dst&gt;]
+    [-renameSnapshot &lt;snapshotDir&gt; &lt;oldName&gt; &lt;newName&gt;]
+    [-rm [-f] [-r|-R] [-skipTrash] &lt;src&gt; ...]
+    [-rmdir [--ignore-fail-on-non-empty] &lt;dir&gt; ...]
+    [-setfacl [-R] [{-b|-k} {-m|-x &lt;acl_spec&gt;} &lt;path&gt;]|[--set &lt;acl_spec&gt; &lt;path&gt;]]
+    [-setfattr {-n name [-v value] | -x name} &lt;path&gt;]
+    [-setrep [-R] [-w] &lt;rep&gt; &lt;path&gt; ...]
+    [-stat [format] &lt;path&gt; ...]
+    [-tail [-f] &lt;file&gt;]
+    [-test -[defsz] &lt;path&gt;]
+    [-text [-ignoreCrc] &lt;src&gt; ...]
+    [-touchz &lt;path&gt; ...]
+    [-usage [cmd ...]]
+</code></pre>
+<pre><code class="bash">hadoop fs -ls /
+hadoop fs -put README.txt /
+hadoop fs -cat /README.txt
+hadoop fs -text /README.txt
+hadoop fs -copyFromLocal excludes.txt /
+hadoop fs -moveFromLocal /
+hadoop fs -get /README.txt .
+hadoop fs -mkdir /test1
+hadoop fs -mv /README.txt /test1
+hadoop fs -cp /test1/README.txt /test1/README.txt-bak
+hadoop fs -getmerge /test1 ./mmm.txt
+hadoop fs -rm  /test1/README.txt-bak
+hadoop fs -rm -r  /test1
+hadoop fs -rmdir  /test1
+</code></pre>
+<h2 id="1-7-hdfs文件的存储机制"><a href="#1-7-hdfs文件的存储机制" class="headerlink" title="1.7 hdfs文件的存储机制"></a>1.7 hdfs文件的存储机制</h2><p>文件到底在哪：<br><code>tmp/dfs/data/current/BP-28074851-192.168.199.233-1539551174228/current/finalized/subdir0/subdir3</code></p>
+<ul>
+<li>PUT: 1 file =&gt; 1..n block =&gt;存放在不同节点</li>
+<li>GET: 去nn上查找这个文件的愿数据信息</li>
+</ul>
+<p>hdfs: 拆文件组装文件的过程</p>
 
       
     </div>
@@ -725,7 +910,7 @@ export PATH
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Hadoop入门（二）——-搭建单节点的Hadoop环境"><span class="nav-number">1.</span> <span class="nav-text">1 Hadoop入门（二）—— 搭建单节点的Hadoop环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-配置hostname"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 配置hostname</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-hadoop-相关环境搭建"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 hadoop 相关环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-JDK-1-8环境部署"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 JDK 1.8环境部署</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Hadoop入门（二）——-搭建单节点的Hadoop环境"><span class="nav-text">1 Hadoop入门（二）—— 搭建单节点的Hadoop环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-配置hostname"><span class="nav-text">1.1 配置hostname</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-hadoop-相关环境搭建"><span class="nav-text">1.2 hadoop 相关环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-JDK-1-8环境部署"><span class="nav-text">1.3 JDK 1.8环境部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-ssh无密码登陆部署"><span class="nav-text">1.4 ssh无密码登陆部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Hadoop-安装"><span class="nav-text">1.5 Hadoop 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-hadooop软件包常见目录说明"><span class="nav-text">1.5.1 hadooop软件包常见目录说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-Hadoop配置"><span class="nav-text">1.5.2 Hadoop配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-启动hdfs"><span class="nav-text">1.5.3 启动hdfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-4-停止集群以及单个节点启动"><span class="nav-text">1.5.4 停止集群以及单个节点启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-HDFS命令行操作"><span class="nav-text">1.6 HDFS命令行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-hdfs文件的存储机制"><span class="nav-text">1.7 hdfs文件的存储机制</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -759,7 +944,7 @@ export PATH
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.7k</span>
+    <span title="Site words total count">4.8k</span>
   
 </div>
 
