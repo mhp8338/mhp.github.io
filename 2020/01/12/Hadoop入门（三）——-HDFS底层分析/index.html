@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://mhp.github.io/2020/01/12/Hadoop入门（三）——-HDFS底层分析/hdfs写数据.jpg">
 <meta property="og:image" content="http://mhp.github.io/2020/01/12/Hadoop入门（三）——-HDFS底层分析/HDFS读文件.jpg">
-<meta property="og:updated_time" content="2020-01-12T09:29:26.495Z">
+<meta property="og:updated_time" content="2020-01-12T09:32:01.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop入门（三）—— HDFS底层分析">
 <meta name="twitter:description" content="1 Hadoop入门（三）—— HDFS底层分析1.1 副本摆放策略机架感知摆放策略：（1）同一机架内的节点通信方便，不需要交换机（2）若将所有节点放入同一机架，则容错性将变得很差（3）摆放策略如下： - 副本一 =&amp;gt; 本rack的一个节点上 - 副本二 =&amp;gt; 另外一个rack的节点上 - 副本三 =&amp;gt; 与副本二相同rack的另外一个节点上  （4）容错性较强，三个副本在两个ra">
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  413
+                  417
                 </span>
               
 
@@ -441,9 +441,9 @@
 - 副本二 =&gt; 另外一个rack的节点上
 - 副本三 =&gt; 与副本二相同rack的另外一个节点上
 </code></pre><p> （4）容错性较强，三个副本在两个rack上，提高读写效率</p>
-<h2 id="1-2-HDFS写数据的流程"><a href="#1-2-HDFS写数据的流程" class="headerlink" title="1.2 HDFS写数据的流程"></a>1.2 HDFS写数据的流程</h2><p> 客户端写数据到hdfs的流程</p>
+<h2 id="1-2-HDFS写数据的流程"><a href="#1-2-HDFS写数据的流程" class="headerlink" title="1.2 HDFS写数据的流程"></a>1.2 HDFS写数据的流程</h2><p> 客户端写数据到hdfs的流程如图</p>
 <p> <img src="/2020/01/12/Hadoop入门（三）——-HDFS底层分析/hdfs写数据.jpg" alt></p>
-<h2 id="1-3-HDFS读数据的流程"><a href="#1-3-HDFS读数据的流程" class="headerlink" title="1.3 HDFS读数据的流程"></a>1.3 HDFS读数据的流程</h2><p> 客户端从hdfs读数据的流程</p>
+<h2 id="1-3-HDFS读数据的流程"><a href="#1-3-HDFS读数据的流程" class="headerlink" title="1.3 HDFS读数据的流程"></a>1.3 HDFS读数据的流程</h2><p> 客户端从hdfs读数据的流程如图</p>
 <p> <img src="/2020/01/12/Hadoop入门（三）——-HDFS底层分析/HDFS读文件.jpg" alt></p>
 <h2 id="1-4-HDFS-checkpoint详解"><a href="#1-4-HDFS-checkpoint详解" class="headerlink" title="1.4 HDFS checkpoint详解"></a>1.4 HDFS checkpoint详解</h2><p>hdfs的元数据管理：<br>元数据：hdfs的目录结构以及每个文件的block信息{id,replication,block_id}<br>存在什么地方：对应配置文件<code>{hadoop.tmp.dir}/name/..</code><br><strong>fsimage</strong>:定期将内存中的元数据序列化到磁盘<br><strong>edits</strong>:日志记录时间段内所有对hdfs的操作指令</p>
 <h3 id="check-point"><a href="#check-point" class="headerlink" title="check point"></a><strong>check point</strong></h3><p>SecondNameNode:辅佐namenode合并<code>fsimage</code>和<code>edits</code></p>
@@ -701,7 +701,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.2k</span>
+    <span title="Site words total count">5.3k</span>
   
 </div>
 
