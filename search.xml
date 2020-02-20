@@ -35,7 +35,7 @@
     <url>/2020/01/08/Linux-Shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="1-Linux-shell-命令"><a href="#1-Linux-shell-命令" class="headerlink" title="1 Linux shell 命令"></a>1 Linux shell 命令</h1><p>切换root：<code>sudo -i</code><br>切换hadoop: <code>su hadoop</code></p>
 <p>查看centos的版本：<code>uname -a</code></p>
-<p>下载：<code>wget</code> —</p>
+<p>下载：<code>wget</code> —-</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -53,6 +53,7 @@
 <li>ssh 连接:<br><code>ssh username@ip</code></li>
 </ul>
 <p><code>mkdir</code>创建文件夹：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -87,20 +88,21 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="1-1-配置hostname"><a href="#1-1-配置hostname" class="headerlink" title="1.1 配置hostname"></a>1.1 配置hostname</h2><p>配置服务器的hostname：<code>sudo vim /etc/hosts</code></p>
-<pre><code class="bash">192.168.215.100 hadoop000
+<pre><code class="lang-bash">192.168.215.100 hadoop000
 127.0.0.1 localhost
 </code></pre>
 <p>建立hadoop000与IP的映射，可以直接通过hadoop000访问服务器</p>
 <h2 id="1-2-hadoop-相关环境搭建"><a href="#1-2-hadoop-相关环境搭建" class="headerlink" title="1.2 hadoop 相关环境搭建"></a>1.2 hadoop 相关环境搭建</h2><p>1) Hadoop使用版本：CDH 版本 <a href="https://archive.cloudera.com/cdh5/cdh/5/" title="hadoop-2.6.0-cdh5.15.1/" target="_blank" rel="noopener">hadoop-2.6.0-cdh5.15.1</a><br>2) 版本的尾号必须相同: <code>cdh5.15.1</code><br>3) Hive的使用版本：hive-1.1.0-cdh5.15.1<br>4) java: 1.8<br>5) ssh</p>
 <h2 id="1-3-JDK-1-8环境部署"><a href="#1-3-JDK-1-8环境部署" class="headerlink" title="1.3 JDK 1.8环境部署"></a>1.3 JDK 1.8环境部署</h2><p>1) 从本地拷贝至服务器<br>2) 解压<br>3) 配置环境变量,修改配置文件<br>4) 生效<br>5) 验证</p>
-<pre><code class="bash">scp jdk-8u91-linux-x64.tar.gz hadoop@ip:~/software/
+<pre><code class="lang-bash">scp jdk-8u91-linux-x64.tar.gz hadoop@ip:~/software/
 tar -zxvf hadoop-2.6.0-cdh5.15.1.tar.gz -C ~/app/
 sudo vim .bash_profile
 source .bash_profile
 java -version
 </code></pre>
-<pre><code class="bash"># .bash_profile
+<pre><code class="lang-bash"># .bash_profile
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -125,19 +127,19 @@ export PATH
 </code></pre>
 <h2 id="1-4-ssh无密码登陆部署"><a href="#1-4-ssh无密码登陆部署" class="headerlink" title="1.4 ssh无密码登陆部署"></a>1.4 ssh无密码登陆部署</h2><p><code>ssh hadoop000</code>每一次登陆都需要密码，影响主从节点通信</p>
 <p>输入：<code>ssh-keygen -t rsa</code><br>进入：<code>cd ~/.ssh</code></p>
-<pre><code class="shell">-rw------- 1 hadoop hadoop  398 10月 15 2018 authorized_keys
+<pre><code class="lang-shell">-rw------- 1 hadoop hadoop  398 10月 15 2018 authorized_keys
 -rw------- 1 hadoop hadoop 1679 10月 15 2018 id_rsa //私钥
 -rw-r--r-- 1 hadoop hadoop  398 10月 15 2018 id_rsa.pub //公钥
 -rw-r--r-- 1 hadoop hadoop 1060 1月   7 23:54 known_hosts
 </code></pre>
 <p>将公钥写入authorized_keys</p>
-<pre><code class="shell">cat id_rsa.pub &gt;&gt; authorized_keys
+<pre><code class="lang-shell">cat id_rsa.pub &gt;&gt; authorized_keys
 
 #修改authorized_keys权限
 chmod 600 authorized_keys
 </code></pre>
 <h2 id="1-5-Hadoop-安装"><a href="#1-5-Hadoop-安装" class="headerlink" title="1.5 Hadoop 安装"></a>1.5 Hadoop 安装</h2><p>1) 下载<br>2) 解压:<code>~/app</code><br>3)添加$HADOOP_HOME/bin到系统环境变量</p>
-<h3 id="1-5-1-hadooop软件包常见目录说明"><a href="#1-5-1-hadooop软件包常见目录说明" class="headerlink" title="1.5.1 hadooop软件包常见目录说明"></a>1.5.1 hadooop软件包常见目录说明</h3><pre><code class="shell">drwxr-xr-x  2 hadoop hadoop   137 8月  10 2018 bin
+<h3 id="1-5-1-hadooop软件包常见目录说明"><a href="#1-5-1-hadooop软件包常见目录说明" class="headerlink" title="1.5.1 hadooop软件包常见目录说明"></a>1.5.1 hadooop软件包常见目录说明</h3><pre><code class="lang-shell">drwxr-xr-x  2 hadoop hadoop   137 8月  10 2018 bin
 drwxr-xr-x  2 hadoop hadoop   166 8月  10 2018 bin-mapreduce1
 drwxr-xr-x  3 hadoop hadoop  4096 10月 15 2018 cloudera
 drwxr-xr-x  6 hadoop hadoop   109 8月  10 2018 etc
@@ -154,6 +156,7 @@ drwxr-xr-x  3 hadoop hadoop  4096 8月  10 2018 sbin
 drwxr-xr-x  4 hadoop hadoop    31 8月  10 2018 share
 drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 </code></pre>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -188,8 +191,9 @@ drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="1-5-2-Hadoop配置"><a href="#1-5-2-Hadoop配置" class="headerlink" title="1.5.2 Hadoop配置"></a>1.5.2 Hadoop配置</h3><p>1) Hadoop-env.sh： 配置Java<br>2) 配置默认的文件系统(主节点)：core-site.xml</p>
-<pre><code class="xml">&lt;configuration&gt;
+<pre><code class="lang-xml">&lt;configuration&gt;
     &lt;property&gt;
         &lt;name&gt;fs.defaultFS&lt;/name&gt;
         &lt;value&gt;hdfs://hadoop:8020&lt;/value&gt;
@@ -197,7 +201,7 @@ drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 &lt;/configuration&gt;
 </code></pre>
 <p>3) 配置副本系数(单节点)：hdfs-site.xml</p>
-<pre><code class="xml">&lt;configuration&gt;
+<pre><code class="lang-xml">&lt;configuration&gt;
    &lt;property&gt;
         &lt;name&gt;dfs.replication&lt;/name&gt;
         &lt;value&gt;1&lt;/value&gt;
@@ -205,7 +209,7 @@ drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 &lt;/configuration&gt;
 </code></pre>
 <p>4) 修改临时文件的base目录</p>
-<pre><code class="xml">&lt;configuration&gt;
+<pre><code class="lang-xml">&lt;configuration&gt;
    &lt;property&gt;
         &lt;name&gt;hadoop.tem.dir&lt;/name&gt;
         &lt;value&gt;/home/hadoop/app/tmp&lt;/value&gt;
@@ -214,13 +218,13 @@ drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 </code></pre>
 <p>5) 修改从节点:<code>hadoop000</code></p>
 <h3 id="1-5-3-启动hdfs"><a href="#1-5-3-启动hdfs" class="headerlink" title="1.5.3 启动hdfs"></a>1.5.3 启动hdfs</h3><p><strong>第一次执行时一定要格式化文件系统，后期不可重复执行</strong></p>
-<pre><code class="shell">hdfs namenode -format
+<pre><code class="lang-shell">hdfs namenode -format
 </code></pre>
 <p>启动服务：<code>sbin</code>目录下</p>
-<pre><code class="shell">./start-dfs.sh
+<pre><code class="lang-shell">./start-dfs.sh
 </code></pre>
 <p>验证：<br>(1)三个节点</p>
-<pre><code class="shell">jps
+<pre><code class="lang-shell">jps
 
 20720 NameNode
 21047 SecondaryNameNode
@@ -228,7 +232,7 @@ drwxr-xr-x 18 hadoop hadoop  4096 8月  10 2018 src
 20830 DataNode
 </code></pre>
 <p>如果出现错误：查看日志 <code>/home/hadoop/app/hadoop-2.6.0-cdh5.15.1/logs</code><br>(2) 浏览器验证<br>192.168.215.100:50070 =&gt;关闭防火墙</p>
-<pre><code class="shell">#查看防火墙状态
+<pre><code class="lang-shell">#查看防火墙状态
 firewall-cmd --state
 
 #关闭防火墙
@@ -236,7 +240,6 @@ systemctl stop firewalld.service
 
 #禁止防火墙开机启动
 systemctl disable firewalld.service
-
 </code></pre>
 <h3 id="1-5-4-停止集群以及单个节点启动"><a href="#1-5-4-停止集群以及单个节点启动" class="headerlink" title="1.5.4 停止集群以及单个节点启动"></a>1.5.4 停止集群以及单个节点启动</h3><p>停止dfs：<code>./stop-dfs.sh</code><br>开启某一线程：<code>./hadoop-daemon.sh start namenode</code></p>
 <p>start/stop-dfs.sh与hadoop-daemon.sh的关系：<br>start-dfs.sh =&gt; </p>
@@ -246,7 +249,7 @@ systemctl disable firewalld.service
 <li>hadoop-daemon.sh start secondarynamenode</li>
 </ul>
 <h2 id="1-6-HDFS命令行操作"><a href="#1-6-HDFS命令行操作" class="headerlink" title="1.6 HDFS命令行操作"></a>1.6 HDFS命令行操作</h2><p><code>bin</code>目录下的执行<br>hadoop fs [generic options]</p>
-<pre><code class="shell">    [-appendToFile &lt;localsrc&gt; ... &lt;dst&gt;] 
+<pre><code class="lang-shell">    [-appendToFile &lt;localsrc&gt; ... &lt;dst&gt;] 
     [-cat [-ignoreCrc] &lt;src&gt; ...]
     [-checksum &lt;src&gt; ...]
     [-chgrp [-R] GROUP PATH...]
@@ -286,7 +289,7 @@ systemctl disable firewalld.service
     [-touchz &lt;path&gt; ...]
     [-usage [cmd ...]]
 </code></pre>
-<pre><code class="bash">hadoop fs -ls /
+<pre><code class="lang-bash">hadoop fs -ls /
 hadoop fs -put README.txt /
 hadoop fs -cat /README.txt
 hadoop fs -text /README.txt
@@ -333,7 +336,8 @@ hadoop fs -rmdir  /test1
 <li>存放的是文件或者文件夹</li>
 <li>对外提供服务：创建、修改、删除、查看、移动等等</li>
 </ul>
-<h3 id="1-2-2-普通文件系统VS分布式文件系统"><a href="#1-2-2-普通文件系统VS分布式文件系统" class="headerlink" title="1.2.2 普通文件系统VS分布式文件系统"></a>1.2.2 普通文件系统VS分布式文件系统</h3><table>
+<h3 id="1-2-2-普通文件系统VS分布式文件系统"><a href="#1-2-2-普通文件系统VS分布式文件系统" class="headerlink" title="1.2.2 普通文件系统VS分布式文件系统"></a>1.2.2 普通文件系统VS分布式文件系统</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>普通文件系统</th>
@@ -347,6 +351,7 @@ hadoop fs -rmdir  /test1
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="1-3-HDFS的前提和设计目标"><a href="#1-3-HDFS的前提和设计目标" class="headerlink" title="1.3 HDFS的前提和设计目标"></a>1.3 HDFS的前提和设计目标</h2><h3 id="Hardware-Failure"><a href="#Hardware-Failure" class="headerlink" title="Hardware Failure"></a>Hardware Failure</h3><p>硬件的故障，是一种常见异常，为了减少该异常的影响（也就是容错），每个机器只存储文件的一部分，即一个block。<strong>将一个文件拆分为多个block，然后分别打入不同的机器中</strong>。</p>
 <h3 id="Streaming-Data-Access"><a href="#Streaming-Data-Access" class="headerlink" title="Streaming Data Access"></a>Streaming Data Access</h3><p>The emphasis is on high throughput of data access rather than low latency of data access.<br>高吞吐量而不是低延时——不适合做实时处理</p>
 <h3 id="Large-Data-Sets"><a href="#Large-Data-Sets" class="headerlink" title="Large Data Sets"></a>Large Data Sets</h3><p>支持大规模数据存储，不怕数据大，怕数据小</p>
@@ -355,6 +360,7 @@ hadoop fs -rmdir  /test1
 <li>NameNode(master) and DataNodes(slave)</li>
 <li>master/slave architecture</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -380,9 +386,11 @@ hadoop fs -rmdir  /test1
 </tr>
 </tbody>
 </table>
+</div>
 <p>HDFS exposes a file system namespace and allows user data to be stored in files.</p>
 <h3 id="1-4-1-内部实现"><a href="#1-4-1-内部实现" class="headerlink" title="1.4.1 内部实现"></a>1.4.1 内部实现</h3><p>1) a file is split into one or more blocks:<br> <code>blocksize: 128M</code><br><code>150M -&gt; 128M 22M</code><br>2) these blocks are stored in a set of DataNodes:<br>只为容错啊！</p>
 <p>3) The NameNode executes file system namespace operations like opening, closing, and renaming files and directories :CRUD<br>4) determines the mapping of blocks to DataNodes<br>存放数据的具体位置信息，例如</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -399,6 +407,7 @@ hadoop fs -rmdir  /test1
 </tr>
 </tbody>
 </table>
+</div>
 <p>namenode 存储如下关系，客户端通过该关系找到a.txt文件<br>block1 : 128M 192.168.199.1<br>block2 :   22M 192.168.199.2<br>GET a.txt  </p>
 <p><strong>用户对该过程不感知</strong><br><img src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png" alt="NameNode and DataNodes" title="NameNode and DataNodes"></p>
 <p>5)通常情况下，一个node部署一个机器，但也可以一台机器部署多个node</p>
@@ -426,7 +435,7 @@ hadoop fs -rmdir  /test1
 <p>缺点：无接口，拓展困难</p>
 <p>重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射攻击</p>
 <p>单例模式：懒汉式、饿汉式</p>
-<h2 id="懒汉式单例设计模式"><a href="#懒汉式单例设计模式" class="headerlink" title="懒汉式单例设计模式"></a>懒汉式单例设计模式</h2><pre><code class="java">public class LazySingleton {
+<h2 id="懒汉式单例设计模式"><a href="#懒汉式单例设计模式" class="headerlink" title="懒汉式单例设计模式"></a>懒汉式单例设计模式</h2><pre><code class="lang-java">public class LazySingleton {
     /**
      * 初始化懒加载
      */
@@ -453,7 +462,7 @@ hadoop fs -rmdir  /test1
 }
 </code></pre>
 <p>单线程可用，但多线程会破坏单例契约，线程不安全</p>
-<pre><code class="java">public class LazySingletonTest {
+<pre><code class="lang-java">public class LazySingletonTest {
     /**
      * 检测线程是否安全
      */
@@ -469,9 +478,8 @@ hadoop fs -rmdir  /test1
 
 
 }
-
 </code></pre>
-<pre><code class="java">public class T implements Runnable {
+<pre><code class="lang-java">public class T implements Runnable {
     @Override
     public void run() {
         LazySingleton lazySingleton = LazySingleton.getInstance();
@@ -480,7 +488,7 @@ hadoop fs -rmdir  /test1
 }
 </code></pre>
 <p>Debug调试，令两个线程都溜入该单例模式的20行中，闷声发大财。<strong>两个线程均产生各自的对象</strong></p>
-<pre><code class="shell">Thread-0  singleton.LazySingleton@15082754
+<pre><code class="lang-shell">Thread-0  singleton.LazySingleton@15082754
 Thread-1  singleton.LazySingleton@16fea746
 Program End...
 </code></pre>
@@ -489,7 +497,7 @@ Program End...
 <li>加在到静态方法中，锁定整个class文件</li>
 <li>加在非静态方法中，锁的是堆内存中的对象</li>
 </ul>
-<pre><code class="java">public synchronized static LazySingleton getInstance(){
+<pre><code class="lang-java">public synchronized static LazySingleton getInstance(){
         if(lazySingleton == null){
             lazySingleton = new LazySingleton();
         }
@@ -505,8 +513,7 @@ public static LazySingleton getInstance(){
         return lazySingleton;
     }
 </code></pre>
-<p>###懒汉式单例模式进化——Double Check Lazy Singleton</p>
-<pre><code class="java">public class LazyDoubleCheckSingleton {
+<h3 id="懒汉式单例模式进化——Double-Check-Lazy-Singleton"><a href="#懒汉式单例模式进化——Double-Check-Lazy-Singleton" class="headerlink" title="懒汉式单例模式进化——Double Check Lazy Singleton"></a>懒汉式单例模式进化——Double Check Lazy Singleton</h3><pre><code class="lang-java">public class LazyDoubleCheckSingleton {
     /**
      * volatile解决由重排序而产生的空指针异常，volatile中不允许重排序
      */
@@ -541,7 +548,7 @@ public static LazySingleton getInstance(){
 <li>添加判断，减少synchronize锁的使用</li>
 <li>volatile修饰变量，解决由重排序而引起的空指针异常，解决方式是不允许重排序</li>
 </ul>
-<h3 id="静态内部类单例模式"><a href="#静态内部类单例模式" class="headerlink" title="静态内部类单例模式"></a>静态内部类单例模式</h3><pre><code class="java">public class StaticInnerClassSingleton {
+<h3 id="静态内部类单例模式"><a href="#静态内部类单例模式" class="headerlink" title="静态内部类单例模式"></a>静态内部类单例模式</h3><pre><code class="lang-java">public class StaticInnerClassSingleton {
     /**
      * 私有构造方法
      */
@@ -572,7 +579,7 @@ public static LazySingleton getInstance(){
 <li>基于类初始化的延迟单例解决方案</li>
 </ul>
 <h3 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h3><p>饿汉式单例模式：类加载时就初始化完成，可以用final修饰，可用静态代码块的方式创建实例</p>
-<pre><code class="java">public class HungrySingleton {
+<pre><code class="lang-java">public class HungrySingleton {
     /**
      * 创建实例，直接初始化
      */
@@ -886,5 +893,184 @@ git reset --hard Head~100
       <tags>
         <tag>Git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>一、线性模型和逻辑回归</title>
+    <url>/2019/04/19/%E4%B8%80%E3%80%81%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E5%92%8C%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h1 id="一、线性模型"><a href="#一、线性模型" class="headerlink" title="一、线性模型"></a>一、线性模型</h1><h2 id="1-1-线性模型"><a href="#1-1-线性模型" class="headerlink" title="1.1 线性模型"></a>1.1 线性模型</h2><p>线性模型：试图学得一个<strong>属性的线性组合</strong>来进行预测的函数</p>
+<script type="math/tex; mode=display">
+f(x) = w_1x_1+w_2x_2+..+w_dx_d+b</script><p>向量模式：</p>
+<script type="math/tex; mode=display">
+f(x)=w^Tx+b</script><p><em>简单、基本、可解释性好</em>（可看出每部分属性所做的贡献）</p>
+<p>可用于分类和回归</p>
+<h2 id="1-2-线性回归"><a href="#1-2-线性回归" class="headerlink" title="1.2 线性回归"></a>1.2 线性回归</h2><ul>
+<li>有监督学习$\rightarrow$学习样本为$D={(x<em>i,y_i)}^{N}</em>{i=1}$</li>
+<li>输出预测结果$y$为连续变量</li>
+<li>需要学习映射</li>
+<li>假定输入和输出之间有线性相关关系$f:X\rightarrow Y$ </li>
+</ul>
+<h3 id="1-2-1-房价预测"><a href="#1-2-1-房价预测" class="headerlink" title="1.2.1 房价预测"></a>1.2.1 房价预测</h3><p>多个特征${x_1,x_2,…,x_n}$</p>
+<script type="math/tex; mode=display">
+h_{\theta}(x) = \sum_{i=0}^{n}\theta_ix_i=\theta^Tx</script><h3 id="1-2-2-损失函数"><a href="#1-2-2-损失函数" class="headerlink" title="1.2.2 损失函数"></a>1.2.2 损失函数</h3><ul>
+<li><p>cost function</p>
+</li>
+<li><p>objective</p>
+</li>
+</ul>
+<p>损失函数MSE</p>
+<script type="math/tex; mode=display">
+J(\theta_0,\theta_1,..,\theta_n) = \frac{1}{2m}\sum_{i=0}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2</script><p>损失函数是一个先减小后增大的过程（随着$\theta$）,是一个凸函数，衡量预测值与标准答案的差异。</p>
+<p>优化损失函数的方法：<strong>梯度下降</strong> ，梯度是上升最快的方向，负梯度是下降最快的方向。</p>
+<script type="math/tex; mode=display">
+y=\theta_1x_1+\theta_0</script><script type="math/tex; mode=display">
+\theta_0:=\theta_0-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})</script><script type="math/tex; mode=display">
+\theta_1:=\theta_1-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})\cdot x^{(i)}</script><p>$\alpha$太小，收敛速度太慢</p>
+<p>$\alpha$太大，收敛速度快，震荡不稳定，甚至不收敛</p>
+<h3 id="1-2-3-欠拟合和过拟合"><a href="#1-2-3-欠拟合和过拟合" class="headerlink" title="1.2.3 欠拟合和过拟合"></a>1.2.3 欠拟合和过拟合</h3><p>多项式拟合：选取多项式的次数</p>
+<p>模型的欠拟合和过拟合</p>
+<p>欠拟合：没有很好的捕捉到数据的特征，不能很好的拟合数据</p>
+<p>过拟合：把样本点的一些噪声特性也学习下来，泛化能力差</p>
+<p>实际工业界使用各种模型都存在过拟合的风险：</p>
+<ul>
+<li>更复杂的模型，通常有更强的学习能力，但也容易失去控制</li>
+<li>训练数据存在噪声，不代表真实的数据分布</li>
+</ul>
+<h3 id="1-2-4-正则化"><a href="#1-2-4-正则化" class="headerlink" title="1.2.4 正则化"></a>1.2.4 正则化</h3><p>利用正则化对高次项增加损失，减少高次项的权重，“不让他甩起来”</p>
+<p>单单比对标准答案是不够的，减少$\theta$的绝对值，控制幅度，限制$\theta$的搜索空间</p>
+<script type="math/tex; mode=display">
+J(\theta_0,\theta_1,..,\theta_n) = \frac{1}{2m}\sum_{i=0}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum_{j=1}^{n}\theta_{j}^{2}</script><h2 id="1-3-广义线性模型"><a href="#1-3-广义线性模型" class="headerlink" title="1.3 广义线性模型"></a>1.3 广义线性模型</h2><p>对线性映射的结果进行数学变换，逼近<code>y</code></p>
+<ul>
+<li>指数变换处理</li>
+<li>对数变换处理</li>
+</ul>
+<script type="math/tex; mode=display">
+lny = w^Tx+b</script><script type="math/tex; mode=display">
+y = e^{w^Tx+b}</script><p>利用$e^{w^Tx+b}$逼近y</p>
+<h1 id="二、逻辑回归"><a href="#二、逻辑回归" class="headerlink" title="二、逻辑回归"></a>二、逻辑回归</h1><h2 id="2-1-从线性回归到逻辑回归"><a href="#2-1-从线性回归到逻辑回归" class="headerlink" title="2.1 从线性回归到逻辑回归"></a>2.1 从线性回归到逻辑回归</h2><p>用线性回归+阈值解决分类问题，当有噪声点时，阈值偏移大，健壮性不够。</p>
+<p>因此采用逻辑回归确定决策边界，这一骚操作摒弃原来的拟合样本分布，换了思维：<strong>找到分类的决策边界</strong> </p>
+<h2 id="2-2-sigmoid"><a href="#2-2-sigmoid" class="headerlink" title="2.2 sigmoid"></a>2.2 sigmoid</h2><p>sigmoid函数：</p>
+<script type="math/tex; mode=display">
+y = \frac{1}{1+e^{-z}}</script><script type="math/tex; mode=display">
+z = h_{\theta}(x)</script><p>sigmoid是一个压缩函数，将直线的取值范围压缩至$[0,1]$</p>
+<p>将预测的结果设为目标$x$判断为正样本的概率</p>
+<p>此时$h_{\theta}(x)$为一条决策分类边界：</p>
+<p>样本在其外部，所得概率大于0.5</p>
+<p>样本在其内部，所得概率小于0.5</p>
+<p><img src="evernotecid://61396413-2083-47E0-96E9-72E511137D86/appyinxiangcom/27861680/ENResource/p64" alt="b4b8065f7a10ea28f6489e85085787b5.png"></p>
+<h2 id="2-3-损失函数"><a href="#2-3-损失函数" class="headerlink" title="2.3 损失函数"></a>2.3 损失函数</h2><p>若采用均方差损失<code>MSE</code>：</p>
+<script type="math/tex; mode=display">
+J(\theta)=\frac{1}{m}\sum_{i=1}^{m}\frac{1}{2}(h_{\theta}(x^{(i)})-y^{(i)})^{2}</script><p>该损失函数是非凸函数，有很多局部最值点，无法优化</p>
+<p>因此采用对数损失（二元交叉熵损失）</p>
+<script type="math/tex; mode=display">
+Cost(h_{\theta}(x),y)=\left\{\begin{matrix}
+ -log(h_{\theta}(x))&y=1 \\ 
+ -log(1-h_{\theta}(x))&y=0 
+\end{matrix}\right.</script><script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}log(h_{\theta}(x^{(i)}))+(1-y^{(i)})log(1-h_{\theta}(x^{(i)}))]</script><p>添加正则化项</p>
+<script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}log(h_{\theta}(x^{(i)}))+(1-y^{(i)})log(1-h_{\theta}(x^{(i)}))]+\frac{\lambda}{2m}\sum_{j=1}^{n}\theta_{j}^{2}</script><h2 id="2-4-损失函数优化"><a href="#2-4-损失函数优化" class="headerlink" title="2.4 损失函数优化"></a>2.4 损失函数优化</h2><p>梯度下降法，沿着损失函数梯度的方向逐步修正参数：</p>
+<script type="math/tex; mode=display">
+\theta_{j}:=\theta_{j}-\alpha\frac{\partial}{\partial \theta_{j}}J(\theta)</script><h2 id="2-5-从二分类到多分类"><a href="#2-5-从二分类到多分类" class="headerlink" title="2.5 从二分类到多分类"></a>2.5 从二分类到多分类</h2><p>one vs one：分成多个两组$[c_1,c_2],[c_1,c_3],[c_2,c_3]$求每类的概率</p>
+<p>预测结果为最大的概率对应的类</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$c_1,c_2$</td>
+<td>$p_1,p_2$</td>
+</tr>
+<tr>
+<td>$c_3,c_4$</td>
+<td>$p_3,p_4$</td>
+</tr>
+<tr>
+<td>$c_5,c_6$</td>
+<td>$p_5,p_6$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>One VS rest：分别预测是否为$c_1,c_2,c_3$类，预测结果为最大概率对应的类</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$c_1 VS \, rest$</td>
+<td>$p_1$</td>
+</tr>
+<tr>
+<td>$c_2 VS \, rest$</td>
+<td>$p_2$</td>
+</tr>
+<tr>
+<td>$c_3 VS \, rest$</td>
+<td>$p_3$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="三、工程应用的经验"><a href="#三、工程应用的经验" class="headerlink" title="三、工程应用的经验"></a>三、工程应用的经验</h1><h2 id="3-1-逻辑回归-VS-其他模型"><a href="#3-1-逻辑回归-VS-其他模型" class="headerlink" title="3.1 逻辑回归 VS 其他模型"></a>3.1 逻辑回归 VS 其他模型</h2><p>模型本无好坏之分，LR虽然简单，但并不代表它弱于其他模型</p>
+<p>LR优缺点如下表</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">能以概率的形式输出，而非只是0—1判定：可以做ranking</td>
+<td>对样本分布敏感</td>
+</tr>
+<tr>
+<td style="text-align:left">可解释强，可控度高：每个特征对于结果的贡献程度非常清晰</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">训练快，特征工程(FE)之后效果好</td>
+<td>非常依赖特征工程</td>
+</tr>
+<tr>
+<td style="text-align:left">添加特征简单</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>应用：</p>
+<ul>
+<li>CTR预估/推荐系统learning to rank/各种场景的分类</li>
+<li>很多搜索引擎厂的广告CTR预估基线版是LR</li>
+<li>电商搜索排序CTR预估基线版是LR</li>
+<li>新闻app也是LR</li>
+</ul>
+<h2 id="3-2-样本处理"><a href="#3-2-样本处理" class="headerlink" title="3.2 样本处理"></a>3.2 样本处理</h2><ul>
+<li><p>样本特征处理</p>
+<p>离散化后用独热向量编码处理成0-1值</p>
+<p>LR训练连续值，注意幅度缩放</p>
+</li>
+<li><p>处理大样本量（一个机器不够用）</p>
+<p>spark MLlib</p>
+<p>试试采样：是否需要分层采样</p>
+</li>
+<li><p>注意样本平衡</p>
+<p>欠采样，过采样</p>
+<p>修改损失函数，给不同的权重</p>
+</li>
+</ul>
+<h1 id="四、基于python实现"><a href="#四、基于python实现" class="headerlink" title="四、基于python实现"></a>四、基于python实现</h1><h2 id="4-1-线性回归实现"><a href="#4-1-线性回归实现" class="headerlink" title="4.1 线性回归实现"></a>4.1 线性回归实现</h2><h2 id="4-2-逻辑回归"><a href="#4-2-逻辑回归" class="headerlink" title="4.2 逻辑回归"></a>4.2 逻辑回归</h2>]]></content>
   </entry>
 </search>

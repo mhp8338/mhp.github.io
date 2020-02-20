@@ -81,13 +81,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="菜鸟程序猿的小窝">
-<meta property="og:url" content="http://mhp.github.io/categories/Linux/index.html">
+<meta name="description" content="一、线性模型1.1 线性模型线性模型：试图学得一个属性的线性组合来进行预测的函数  f(x) = w_1x_1+w_2x_2+..+w_dx_d+b向量模式：  f(x)=w^Tx+b简单、基本、可解释性好（可看出每部分属性所做的贡献） 可用于分类和回归 1.2 线性回归 有监督学习$\rightarrow$学习样本为$D={(xi,y_i)}^{N}{i=1}$ 输出预测结果$y$为连续变量 需">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一、线性模型和逻辑回归">
+<meta property="og:url" content="http://mhp.github.io/2019/04/19/一、线性模型和逻辑回归/index.html">
 <meta property="og:site_name" content="菜鸟程序猿的小窝">
+<meta property="og:description" content="一、线性模型1.1 线性模型线性模型：试图学得一个属性的线性组合来进行预测的函数  f(x) = w_1x_1+w_2x_2+..+w_dx_d+b向量模式：  f(x)=w^Tx+b简单、基本、可解释性好（可看出每部分属性所做的贡献） 可用于分类和回归 1.2 线性回归 有监督学习$\rightarrow$学习样本为$D={(xi,y_i)}^{N}{i=1}$ 输出预测结果$y$为连续变量 需">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="evernotecid://61396413-2083-47E0-96E9-72E511137D86/appyinxiangcom/27861680/ENResource/p64">
+<meta property="og:updated_time" content="2020-02-20T09:32:19.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鸟程序猿的小窝">
+<meta name="twitter:title" content="一、线性模型和逻辑回归">
+<meta name="twitter:description" content="一、线性模型1.1 线性模型线性模型：试图学得一个属性的线性组合来进行预测的函数  f(x) = w_1x_1+w_2x_2+..+w_dx_d+b向量模式：  f(x)=w^Tx+b简单、基本、可解释性好（可看出每部分属性所做的贡献） 可用于分类和回归 1.2 线性回归 有监督学习$\rightarrow$学习样本为$D={(xi,y_i)}^{N}{i=1}$ 输出预测结果$y$为连续变量 需">
+<meta name="twitter:image" content="evernotecid://61396413-2083-47E0-96E9-72E511137D86/appyinxiangcom/27861680/ENResource/p64">
 
 
 
@@ -117,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://mhp.github.io/categories/Linux/">
+  <link rel="canonical" href="http://mhp.github.io/2019/04/19/一、线性模型和逻辑回归/">
 
 
 
 
 
-  <title>Category: Linux | 菜鸟程序猿的小窝</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>一、线性模型和逻辑回归 | 菜鸟程序猿的小窝</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -142,7 +148,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,53 +284,368 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Linux<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://mhp.github.io/2019/04/19/一、线性模型和逻辑回归/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mhp">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/xiaoxin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="菜鸟程序猿的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/01/08/Linux-Shell常用命令/" itemprop="url">
-              
-                <span itemprop="name">Linux Shell常用命令</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">一、线性模型和逻辑回归</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-08T18:50:52+08:00" content="2020-01-08">
-          01-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-19T17:27:15+08:00">
+                2019-04-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <h1 id="一、线性模型"><a href="#一、线性模型" class="headerlink" title="一、线性模型"></a>一、线性模型</h1><h2 id="1-1-线性模型"><a href="#1-1-线性模型" class="headerlink" title="1.1 线性模型"></a>1.1 线性模型</h2><p>线性模型：试图学得一个<strong>属性的线性组合</strong>来进行预测的函数</p>
+<script type="math/tex; mode=display">
+f(x) = w_1x_1+w_2x_2+..+w_dx_d+b</script><p>向量模式：</p>
+<script type="math/tex; mode=display">
+f(x)=w^Tx+b</script><p><em>简单、基本、可解释性好</em>（可看出每部分属性所做的贡献）</p>
+<p>可用于分类和回归</p>
+<h2 id="1-2-线性回归"><a href="#1-2-线性回归" class="headerlink" title="1.2 线性回归"></a>1.2 线性回归</h2><ul>
+<li>有监督学习$\rightarrow$学习样本为$D={(x<em>i,y_i)}^{N}</em>{i=1}$</li>
+<li>输出预测结果$y$为连续变量</li>
+<li>需要学习映射</li>
+<li>假定输入和输出之间有线性相关关系$f:X\rightarrow Y$ </li>
+</ul>
+<h3 id="1-2-1-房价预测"><a href="#1-2-1-房价预测" class="headerlink" title="1.2.1 房价预测"></a>1.2.1 房价预测</h3><p>多个特征${x_1,x_2,…,x_n}$</p>
+<script type="math/tex; mode=display">
+h_{\theta}(x) = \sum_{i=0}^{n}\theta_ix_i=\theta^Tx</script><h3 id="1-2-2-损失函数"><a href="#1-2-2-损失函数" class="headerlink" title="1.2.2 损失函数"></a>1.2.2 损失函数</h3><ul>
+<li><p>cost function</p>
+</li>
+<li><p>objective</p>
+</li>
+</ul>
+<p>损失函数MSE</p>
+<script type="math/tex; mode=display">
+J(\theta_0,\theta_1,..,\theta_n) = \frac{1}{2m}\sum_{i=0}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2</script><p>损失函数是一个先减小后增大的过程（随着$\theta$）,是一个凸函数，衡量预测值与标准答案的差异。</p>
+<p>优化损失函数的方法：<strong>梯度下降</strong> ，梯度是上升最快的方向，负梯度是下降最快的方向。</p>
+<script type="math/tex; mode=display">
+y=\theta_1x_1+\theta_0</script><script type="math/tex; mode=display">
+\theta_0:=\theta_0-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})</script><script type="math/tex; mode=display">
+\theta_1:=\theta_1-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})\cdot x^{(i)}</script><p>$\alpha$太小，收敛速度太慢</p>
+<p>$\alpha$太大，收敛速度快，震荡不稳定，甚至不收敛</p>
+<h3 id="1-2-3-欠拟合和过拟合"><a href="#1-2-3-欠拟合和过拟合" class="headerlink" title="1.2.3 欠拟合和过拟合"></a>1.2.3 欠拟合和过拟合</h3><p>多项式拟合：选取多项式的次数</p>
+<p>模型的欠拟合和过拟合</p>
+<p>欠拟合：没有很好的捕捉到数据的特征，不能很好的拟合数据</p>
+<p>过拟合：把样本点的一些噪声特性也学习下来，泛化能力差</p>
+<p>实际工业界使用各种模型都存在过拟合的风险：</p>
+<ul>
+<li>更复杂的模型，通常有更强的学习能力，但也容易失去控制</li>
+<li>训练数据存在噪声，不代表真实的数据分布</li>
+</ul>
+<h3 id="1-2-4-正则化"><a href="#1-2-4-正则化" class="headerlink" title="1.2.4 正则化"></a>1.2.4 正则化</h3><p>利用正则化对高次项增加损失，减少高次项的权重，“不让他甩起来”</p>
+<p>单单比对标准答案是不够的，减少$\theta$的绝对值，控制幅度，限制$\theta$的搜索空间</p>
+<script type="math/tex; mode=display">
+J(\theta_0,\theta_1,..,\theta_n) = \frac{1}{2m}\sum_{i=0}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum_{j=1}^{n}\theta_{j}^{2}</script><h2 id="1-3-广义线性模型"><a href="#1-3-广义线性模型" class="headerlink" title="1.3 广义线性模型"></a>1.3 广义线性模型</h2><p>对线性映射的结果进行数学变换，逼近<code>y</code></p>
+<ul>
+<li>指数变换处理</li>
+<li>对数变换处理</li>
+</ul>
+<script type="math/tex; mode=display">
+lny = w^Tx+b</script><script type="math/tex; mode=display">
+y = e^{w^Tx+b}</script><p>利用$e^{w^Tx+b}$逼近y</p>
+<h1 id="二、逻辑回归"><a href="#二、逻辑回归" class="headerlink" title="二、逻辑回归"></a>二、逻辑回归</h1><h2 id="2-1-从线性回归到逻辑回归"><a href="#2-1-从线性回归到逻辑回归" class="headerlink" title="2.1 从线性回归到逻辑回归"></a>2.1 从线性回归到逻辑回归</h2><p>用线性回归+阈值解决分类问题，当有噪声点时，阈值偏移大，健壮性不够。</p>
+<p>因此采用逻辑回归确定决策边界，这一骚操作摒弃原来的拟合样本分布，换了思维：<strong>找到分类的决策边界</strong> </p>
+<h2 id="2-2-sigmoid"><a href="#2-2-sigmoid" class="headerlink" title="2.2 sigmoid"></a>2.2 sigmoid</h2><p>sigmoid函数：</p>
+<script type="math/tex; mode=display">
+y = \frac{1}{1+e^{-z}}</script><script type="math/tex; mode=display">
+z = h_{\theta}(x)</script><p>sigmoid是一个压缩函数，将直线的取值范围压缩至$[0,1]$</p>
+<p>将预测的结果设为目标$x$判断为正样本的概率</p>
+<p>此时$h_{\theta}(x)$为一条决策分类边界：</p>
+<p>样本在其外部，所得概率大于0.5</p>
+<p>样本在其内部，所得概率小于0.5</p>
+<p><img src="evernotecid://61396413-2083-47E0-96E9-72E511137D86/appyinxiangcom/27861680/ENResource/p64" alt="b4b8065f7a10ea28f6489e85085787b5.png"></p>
+<h2 id="2-3-损失函数"><a href="#2-3-损失函数" class="headerlink" title="2.3 损失函数"></a>2.3 损失函数</h2><p>若采用均方差损失<code>MSE</code>：</p>
+<script type="math/tex; mode=display">
+J(\theta)=\frac{1}{m}\sum_{i=1}^{m}\frac{1}{2}(h_{\theta}(x^{(i)})-y^{(i)})^{2}</script><p>该损失函数是非凸函数，有很多局部最值点，无法优化</p>
+<p>因此采用对数损失（二元交叉熵损失）</p>
+<script type="math/tex; mode=display">
+Cost(h_{\theta}(x),y)=\left\{\begin{matrix}
+ -log(h_{\theta}(x))&y=1 \\ 
+ -log(1-h_{\theta}(x))&y=0 
+\end{matrix}\right.</script><script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}log(h_{\theta}(x^{(i)}))+(1-y^{(i)})log(1-h_{\theta}(x^{(i)}))]</script><p>添加正则化项</p>
+<script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}log(h_{\theta}(x^{(i)}))+(1-y^{(i)})log(1-h_{\theta}(x^{(i)}))]+\frac{\lambda}{2m}\sum_{j=1}^{n}\theta_{j}^{2}</script><h2 id="2-4-损失函数优化"><a href="#2-4-损失函数优化" class="headerlink" title="2.4 损失函数优化"></a>2.4 损失函数优化</h2><p>梯度下降法，沿着损失函数梯度的方向逐步修正参数：</p>
+<script type="math/tex; mode=display">
+\theta_{j}:=\theta_{j}-\alpha\frac{\partial}{\partial \theta_{j}}J(\theta)</script><h2 id="2-5-从二分类到多分类"><a href="#2-5-从二分类到多分类" class="headerlink" title="2.5 从二分类到多分类"></a>2.5 从二分类到多分类</h2><p>one vs one：分成多个两组$[c_1,c_2],[c_1,c_3],[c_2,c_3]$求每类的概率</p>
+<p>预测结果为最大的概率对应的类</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$c_1,c_2$</td>
+<td>$p_1,p_2$</td>
+</tr>
+<tr>
+<td>$c_3,c_4$</td>
+<td>$p_3,p_4$</td>
+</tr>
+<tr>
+<td>$c_5,c_6$</td>
+<td>$p_5,p_6$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>One VS rest：分别预测是否为$c_1,c_2,c_3$类，预测结果为最大概率对应的类</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$c_1 VS \, rest$</td>
+<td>$p_1$</td>
+</tr>
+<tr>
+<td>$c_2 VS \, rest$</td>
+<td>$p_2$</td>
+</tr>
+<tr>
+<td>$c_3 VS \, rest$</td>
+<td>$p_3$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="三、工程应用的经验"><a href="#三、工程应用的经验" class="headerlink" title="三、工程应用的经验"></a>三、工程应用的经验</h1><h2 id="3-1-逻辑回归-VS-其他模型"><a href="#3-1-逻辑回归-VS-其他模型" class="headerlink" title="3.1 逻辑回归 VS 其他模型"></a>3.1 逻辑回归 VS 其他模型</h2><p>模型本无好坏之分，LR虽然简单，但并不代表它弱于其他模型</p>
+<p>LR优缺点如下表</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">能以概率的形式输出，而非只是0—1判定：可以做ranking</td>
+<td>对样本分布敏感</td>
+</tr>
+<tr>
+<td style="text-align:left">可解释强，可控度高：每个特征对于结果的贡献程度非常清晰</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">训练快，特征工程(FE)之后效果好</td>
+<td>非常依赖特征工程</td>
+</tr>
+<tr>
+<td style="text-align:left">添加特征简单</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>应用：</p>
+<ul>
+<li>CTR预估/推荐系统learning to rank/各种场景的分类</li>
+<li>很多搜索引擎厂的广告CTR预估基线版是LR</li>
+<li>电商搜索排序CTR预估基线版是LR</li>
+<li>新闻app也是LR</li>
+</ul>
+<h2 id="3-2-样本处理"><a href="#3-2-样本处理" class="headerlink" title="3.2 样本处理"></a>3.2 样本处理</h2><ul>
+<li><p>样本特征处理</p>
+<p>离散化后用独热向量编码处理成0-1值</p>
+<p>LR训练连续值，注意幅度缩放</p>
+</li>
+<li><p>处理大样本量（一个机器不够用）</p>
+<p>spark MLlib</p>
+<p>试试采样：是否需要分层采样</p>
+</li>
+<li><p>注意样本平衡</p>
+<p>欠采样，过采样</p>
+<p>修改损失函数，给不同的权重</p>
+</li>
+</ul>
+<h1 id="四、基于python实现"><a href="#四、基于python实现" class="headerlink" title="四、基于python实现"></a>四、基于python实现</h1><h2 id="4-1-线性回归实现"><a href="#4-1-线性回归实现" class="headerlink" title="4.1 线性回归实现"></a>4.1 线性回归实现</h2><h2 id="4-2-逻辑回归"><a href="#4-2-逻辑回归" class="headerlink" title="4.2 逻辑回归"></a>4.2 逻辑回归</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    mhp
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://mhp.github.io/2019/04/19/一、线性模型和逻辑回归/" title="一、线性模型和逻辑回归">http://mhp.github.io/2019/04/19/一、线性模型和逻辑回归/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/23/Learing-Git/" rel="prev" title="Learing Git">
+                Learing Git <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -332,6 +653,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -352,8 +677,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -438,6 +772,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、线性模型"><span class="nav-text">一、线性模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-线性模型"><span class="nav-text">1.1 线性模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-线性回归"><span class="nav-text">1.2 线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-房价预测"><span class="nav-text">1.2.1 房价预测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-损失函数"><span class="nav-text">1.2.2 损失函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-欠拟合和过拟合"><span class="nav-text">1.2.3 欠拟合和过拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-4-正则化"><span class="nav-text">1.2.4 正则化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-广义线性模型"><span class="nav-text">1.3 广义线性模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、逻辑回归"><span class="nav-text">二、逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-从线性回归到逻辑回归"><span class="nav-text">2.1 从线性回归到逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-sigmoid"><span class="nav-text">2.2 sigmoid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-损失函数"><span class="nav-text">2.3 损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-损失函数优化"><span class="nav-text">2.4 损失函数优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-从二分类到多分类"><span class="nav-text">2.5 从二分类到多分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、工程应用的经验"><span class="nav-text">三、工程应用的经验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-逻辑回归-VS-其他模型"><span class="nav-text">3.1 逻辑回归 VS 其他模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-样本处理"><span class="nav-text">3.2 样本处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、基于python实现"><span class="nav-text">四、基于python实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-线性回归实现"><span class="nav-text">4.1 线性回归实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-逻辑回归"><span class="nav-text">4.2 逻辑回归</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,6 +961,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

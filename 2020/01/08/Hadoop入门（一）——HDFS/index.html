@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -131,7 +131,7 @@
 
 
 
-  <title>Hadoop入门（一）—— HDFS | 菜鸟程序猿的小窝</title>
+  <title>Hadoop入门（一）—— HDFS | 菜鸟程序猿的小窝</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -150,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -450,7 +450,8 @@
 <li>存放的是文件或者文件夹</li>
 <li>对外提供服务：创建、修改、删除、查看、移动等等</li>
 </ul>
-<h3 id="1-2-2-普通文件系统VS分布式文件系统"><a href="#1-2-2-普通文件系统VS分布式文件系统" class="headerlink" title="1.2.2 普通文件系统VS分布式文件系统"></a>1.2.2 普通文件系统VS分布式文件系统</h3><table>
+<h3 id="1-2-2-普通文件系统VS分布式文件系统"><a href="#1-2-2-普通文件系统VS分布式文件系统" class="headerlink" title="1.2.2 普通文件系统VS分布式文件系统"></a>1.2.2 普通文件系统VS分布式文件系统</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>普通文件系统</th>
@@ -464,6 +465,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="1-3-HDFS的前提和设计目标"><a href="#1-3-HDFS的前提和设计目标" class="headerlink" title="1.3 HDFS的前提和设计目标"></a>1.3 HDFS的前提和设计目标</h2><h3 id="Hardware-Failure"><a href="#Hardware-Failure" class="headerlink" title="Hardware Failure"></a>Hardware Failure</h3><p>硬件的故障，是一种常见异常，为了减少该异常的影响（也就是容错），每个机器只存储文件的一部分，即一个block。<strong>将一个文件拆分为多个block，然后分别打入不同的机器中</strong>。</p>
 <h3 id="Streaming-Data-Access"><a href="#Streaming-Data-Access" class="headerlink" title="Streaming Data Access"></a>Streaming Data Access</h3><p>The emphasis is on high throughput of data access rather than low latency of data access.<br>高吞吐量而不是低延时——不适合做实时处理</p>
 <h3 id="Large-Data-Sets"><a href="#Large-Data-Sets" class="headerlink" title="Large Data Sets"></a>Large Data Sets</h3><p>支持大规模数据存储，不怕数据大，怕数据小</p>
@@ -472,6 +474,7 @@
 <li>NameNode(master) and DataNodes(slave)</li>
 <li>master/slave architecture</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -497,9 +500,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>HDFS exposes a file system namespace and allows user data to be stored in files.</p>
 <h3 id="1-4-1-内部实现"><a href="#1-4-1-内部实现" class="headerlink" title="1.4.1 内部实现"></a>1.4.1 内部实现</h3><p>1) a file is split into one or more blocks:<br> <code>blocksize: 128M</code><br><code>150M -&gt; 128M 22M</code><br>2) these blocks are stored in a set of DataNodes:<br>只为容错啊！</p>
 <p>3) The NameNode executes file system namespace operations like opening, closing, and renaming files and directories :CRUD<br>4) determines the mapping of blocks to DataNodes<br>存放数据的具体位置信息，例如</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -516,6 +521,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>namenode 存储如下关系，客户端通过该关系找到a.txt文件<br>block1 : 128M 192.168.199.1<br>block2 :   22M 192.168.199.2<br>GET a.txt  </p>
 <p><strong>用户对该过程不感知</strong><br><img src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png" alt="NameNode and DataNodes" title="NameNode and DataNodes"></p>
 <p>5)通常情况下，一个node部署一个机器，但也可以一台机器部署多个node</p>
@@ -665,7 +671,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -777,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.3k</span>
+    <span title="Site words total count">6.7k</span>
   
 </div>
 
@@ -1284,7 +1290,7 @@
         onPopupClose();
       }
     });
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
